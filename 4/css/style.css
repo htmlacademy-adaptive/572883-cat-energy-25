@@ -1,0 +1,395 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswaldregular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/oswaldregular.woff2") format("woff2");
+  font-display: swap;
+}
+.page {
+  height: 100%;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #444444;
+  background-color: #ffffff;
+  min-width: 320px;
+}
+
+.page__main {
+  flex-grow: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+}
+
+.button {
+  display: block;
+  padding: 11px 26px;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #444444;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f2f2f2;
+  border: none;
+  cursor: pointer;
+}
+
+.page-header {
+  padding: 10px 20px 17px;
+  background-color: #ffffff;
+}
+
+.page-header__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__site-menu {
+  display: none;
+}
+
+.logo__link {
+  display: block;
+}
+
+.site-menu {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  list-style-type: none;
+}
+
+.page-footer {
+  padding: 39px 20px 22px;
+  background: #f2f2f2;
+}
+
+.social {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.contacts {
+  background-color: #ffffff;
+}
+.contacts--light-bg {
+  background-color: #f2f2f2;
+}
+
+.contacts__content {
+  padding: 26px 20px;
+}
+
+.contacts__container {
+  display: flex;
+}
+
+.contacts__offer {
+  width: 50%;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.contacts__address {
+  width: 50%;
+  font-style: normal;
+  line-height: 20px;
+}
+
+/* Для главной */
+.page-main__promo {
+  margin-bottom: 20px;
+}
+
+.page-main__programs {
+  margin-bottom: 20px;
+}
+
+.page-main__about-product {
+  margin-bottom: 49px;
+}
+
+/* Страница Заявки */
+.page-main__application {
+  margin-bottom: 32px;
+}
+
+/* Каталог */
+.page-main__catalog {
+  margin-bottom: 25px;
+}
+
+.page-main__additional-products {
+  margin-bottom: 35px;
+}
+
+.main-header {
+  padding: 27px 20px 41px;
+}
+
+.main-header__title {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1;
+  color: #000000;
+}
+
+.promo {
+  padding: 27px 20px;
+  background-color: #68b738;
+  color: #ffffff;
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+}
+
+.promo__slogan {
+  margin: 0;
+  margin-bottom: 29px;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.programs {
+  padding: 0 20px;
+}
+
+.programs__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.programs__item {
+  padding: 24px 20px 22px;
+  background-color: #f2f2f2;
+}
+
+.programs__title {
+  margin: 0;
+  margin-bottom: 29px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.54;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.programs__item p {
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.programs__link {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}
+
+.about-product {
+  padding: 0 20px;
+}
+
+.about-product__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1.11;
+  color: #000000;
+}
+
+.about-product__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.example {
+  padding: 25px 20px 40px;
+  background-color: #eaeaea;
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1.11;
+  color: #000000;
+}
+
+.example p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.application {
+  padding: 0 20px;
+}
+
+.application__intro {
+  margin: 0;
+  margin-bottom: 39px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.form__group {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 45px;
+  border: none;
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 35px;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.08;
+  color: #000000;
+}
+
+.form__item {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.form__input {
+  font: inherit;
+}
+
+.form__radio {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.form__checkbox {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.catalog {
+  padding: 0 20px;
+}
+
+.catalog__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.product-preview__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+.product-preview__title a {
+  color: #222222;
+  text-decoration: none;
+}
+
+.additional-products {
+  padding: 0 20px;
+}
+
+.additional-products__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  color: #000000;
+}
+
+.additional-products__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Базовые блоки */
+/* Header и Footer */
+/* Для всех страниц */
+/* Блоки Главной */
+/* Заказ */
+/* Каталог товаров */
+/*# sourceMappingURL=style.css.map */
