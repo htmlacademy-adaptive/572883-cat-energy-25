@@ -1,1 +1,35 @@
-// Начните писать стили здесь
+/* Глобальные стили */
+@use "./global/fonts.scss";
+@use "./global/global.scss";
+
+/* Базовые блоки */
+@use "./blocks/page.scss";
+@use "./blocks/container.scss";
+@use "./blocks/button.scss";
+
+/* Header и Footer */
+@use "./blocks/page-header.scss";
+@use "./blocks/logo.scss";
+@use "./blocks/site-menu.scss";
+@use "./blocks/page-footer.scss";
+@use "./blocks/social.scss";
+@use "./blocks/contacts.scss";
+
+/* Для всех страниц */
+@use "./blocks/page-main.scss";
+@use "./blocks/main-header.scss";
+
+/* Блоки Главной */
+@use "./blocks/promo.scss";
+@use "./blocks/programs.scss";
+@use "./blocks/about-product.scss";
+@use "./blocks/example.scss";
+
+/* Заказ */
+@use "./blocks/application.scss";
+@use "./blocks/form.scss";
+
+/* Каталог товаров */
+@use "./blocks/catalog.scss";
+@use "./blocks/product-preview.scss";
+@use "./blocks/additional-products.scss";

@@ -1,0 +1,15 @@
+.page-header {
+  padding: 10px 20px 17px;
+  background-color: #ffffff;
+}
+
+.page-header__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.page-header__site-menu {
+  width: 100%;
+}

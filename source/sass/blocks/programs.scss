@@ -1,0 +1,43 @@
+.programs {
+  padding: 0 20px;
+}
+
+.programs__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.programs__item {
+  padding: 24px 20px 22px;
+  background-color: #f2f2f2;
+}
+
+.programs__title {
+  margin: 0;
+  margin-bottom: 29px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.54;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.programs__item p {
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.programs__link {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}
