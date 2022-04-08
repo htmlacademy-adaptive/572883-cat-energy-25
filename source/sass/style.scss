@@ -1,6 +1,9 @@
+/* Глобальные стили */
+@use "./global/fonts.scss";
+@use "./global/global.scss";
+
 /* Базовые блоки */
 @use "./blocks/page.scss";
-@use "./blocks/visually-hidden.scss";
 @use "./blocks/container.scss";
 @use "./blocks/button.scss";
 

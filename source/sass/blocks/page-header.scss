@@ -7,8 +7,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .page-header__site-menu {
-  display: none;
+  width: 100%;
 }
