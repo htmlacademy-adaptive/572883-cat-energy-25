@@ -3,16 +3,41 @@
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/oswaldregular.woff2") format("woff2");
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/oswaldregular.woff2") format("woff2");
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
   font-display: swap;
 }
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .page {
   height: 100%;
 }
@@ -34,21 +59,11 @@
   flex-grow: 1;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .container {
   width: 100%;
 }
 
+/* Переменные */
 .button {
   display: block;
   padding: 11px 26px;
@@ -62,6 +77,10 @@
   border: none;
   cursor: pointer;
 }
+.button--accent {
+  color: #ffffff;
+  background-color: #68b738;
+}
 
 .page-header {
   padding: 10px 20px 17px;
@@ -72,10 +91,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .page-header__site-menu {
-  display: none;
+  width: 100%;
 }
 
 .logo__link {
@@ -90,6 +110,7 @@
   font-size: 20px;
   line-height: 1;
   list-style-type: none;
+  text-align: center;
 }
 
 .page-footer {
@@ -386,6 +407,7 @@
   list-style-type: none;
 }
 
+/* Глобальные стили */
 /* Базовые блоки */
 /* Header и Footer */
 /* Для всех страниц */
