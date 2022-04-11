@@ -1,31 +1,83 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
 .contacts {
+  position: relative;
+  z-index: 1;
   background-color: #ffffff;
 
   &--light-bg {
-    background-color: #f2f2f2;
+    background-color: $basic-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 95px 0;
+    min-height: 400px;
+    background-color: #ffffff;
   }
 }
 
 .contacts__content {
-  padding: 26px 20px;
-}
-
-.contacts__container {
   display: flex;
+  padding: 26px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 56px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 56px 80px;
+    width: 565px;
+    background-color: #ffffff;
+  }
 }
 
 .contacts__offer {
   width: 50%;
   margin: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: $accent-font;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #000000;
+  color: $dark-text;
 }
 
 .contacts__address {
   width: 50%;
   font-style: normal;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
+}
+
+.contacts__address p {
+  margin: 0;
+}
+
+.contacts__address p:not(:last-child) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.contacts__map {
+  height: 362px;
+  background-image: url("../img/location.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+  }
 }

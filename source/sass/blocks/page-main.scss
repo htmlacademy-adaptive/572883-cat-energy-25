@@ -1,15 +1,45 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
 /* Для главной */
 
 .page-main__promo {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 82px;
+  }
 }
 
 .page-main__programs {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
+  }
 }
 
 .page-main__about-product {
   margin-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 43px;
+    padding-bottom: 47px;
+    border-bottom: 1px solid $light-line;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
+    margin-bottom: 26px;
+    border-bottom: none;
+  }
 }
 
 /* Страница Заявки */

@@ -1,15 +1,51 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
 .page-header {
-  padding: 10px 20px 17px;
-  background-color: #ffffff;
+  position: relative;
+  z-index: 2;
+  padding-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+  }
 }
 
 .page-header__navigation {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+}
+
+.page-header__logo {
+  width: 100%;
+  flex-shrink: 0;
+  margin-bottom: 17px;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+.page-header__menu-toggler {
+  display: none;
+  flex-shrink: 0;
+  margin-top: 7px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__site-menu {
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 8px;
+    width: auto;
+  }
 }
