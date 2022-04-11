@@ -16,28 +16,35 @@
     <div class="container">
       <nav class="page-header__navigation">
 
-        <div class="page-header__logo logo">
-          <a class="logo__link"><span class="visually-hidden">Логотип Cat Energy</span><img class="logo__picture" src="img/logo-mobile.svg" alt="" width="34" height="38"><img class="logo__name" src="img/logo-name.svg" alt="" width="101" height="18"></a>
+        <div class="page-header__logo header-logo">
+          <a class="header-logo__link" href="index.html">
+
+            <span class="visually-hidden">Логотип Cat Energy</span>
+
+            <img class="header-logo__small-img" src="img/logo-small.svg" alt="" width="34" height="38">
+
+            <img class="header-logo__name" src="img/logo-name.svg" alt="" width="101" height="18">
+
+            <img class="header-logo__img" src="img/logo.svg" alt="" width="174" height="52">
+
+          </a>
         </div>
 
         <div class="page-header__menu-toggler">
           <button class="menu-toggler" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
 
-        <div class="page-header__site-menu">
-          <ul class="site-menu">
-            <li class="site-menu__item site-menu__item--current">
-              <a>Главная</a>
-            </li>
-            <li class="site-menu__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-menu__item">
-              <a href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-
+        <ul class="page-header__site-menu site-menu">
+          <li class="site-menu__item site-menu__item--current">
+            <a>Главная</a>
+          </li>
+          <li class="site-menu__item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-menu__item">
+            <a href="form.html">Подбор программы</a>
+          </li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -47,7 +54,7 @@
     <section class="page-main__promo promo">
       <div class="promo__container container">
 
-        <h1 class="promo__title"><span class="visually-hidden">Cat Energy – </span>Функциональное питание для котов</h1>
+        <h1 class="promo__title"><span class="visually-hidden">Cat Energy – </span>Функциональное<br> питание для котов</h1>
 
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
 
@@ -100,32 +107,34 @@
     </section>
 
     <section class="example">
-      <div class="container">
+      <div class="example__container container">
 
-        <h2 class="example__title">Живой пример</h2>
+        <div class="example__content">
+          <h2 class="example__title">Живой пример</h2>
 
-        <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
 
-        <dl class="example__list">
-          <div class="example__item">
-            <dt>Снижение веса</dt>
-            <dd>5 кг</dd>
-          </div>
+          <dl class="example__list">
+            <div class="example__item">
+              <dt>Снижение веса</dt>
+              <dd>5 кг</dd>
+            </div>
 
-          <div class="example__item">
-            <dt>Затрачено времени</dt>
-            <dd>60 дней</dd>
-          </div>
-        </dl>
+            <div class="example__item">
+              <dt>Затрачено времени</dt>
+              <dd>60 дней</dd>
+            </div>
+          </dl>
 
-        <p class="example__expenses">Затраты на питание: <span>15 000 руб.</span></p>
+          <p class="example__expenses">Затраты на питание: <span>15 000 руб.</span></p>
+        </div>
 
         <div class="example__slider comparison-slider">
           <ul class="comparison-slider__list">
             <li class="comparison-slider__item">
               <img src="img/example/cat-fat.png" alt="Борис до того, как он начал есть корм Cat Energy." width="280" height="232">
             </li>
-            <li class="comparison-slider__item">
+            <li class="comparison-slider__item" hidden>
               <img src="img/example/cat-skinny.png" alt="Борис после того, как он начал есть корм Cat Energy." width="280" height="232">
             </li>
           </ul>
@@ -140,13 +149,18 @@
     </section>
 
     <section class="contacts">
-      <div class="contacts__content">
-        <div class="contacts__container container">
+      <div class="contacts__container container">
+        <div class="contacts__content">
+
           <h2 class="visually-hidden">Контакты</h2>
 
-          <p class="contacts__offer">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__offer">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
 
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="contacts__address">
+            <p>ул. Большая<br>  Конюшенная, д. 19/8</p>
+            <p>Санкт-Петербург</p>
+          </address>
+
         </div>
       </div>
 
@@ -158,25 +172,30 @@
   <footer class="page__footer page-footer">
     <div class="page-footer__container container">
 
-      <div class="page-footer__logo logo">
-        <a class="logo__link"><span class="visually-hidden">Логотип Cat Energy</span><img class="logo__name" src="img/logo-name.svg" alt="" width="128" height="24"></a>
+      <div class="page-footer__logo">
+        <a><span class="visually-hidden">Логотип Cat Energy</span><img src="img/logo-name.svg" alt="" width="128" height="24"></a>
       </div>
 
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a class="social__link social__link--vk" href="#"><span class="visually-hidden">Наша страница в ВКонтакте</span></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Наш канал на Youtube</span></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--telegram" href="#"><span class="visually-hidden">Наш Telegram</span></a>
-        </li>
-      </ul>
+      <div class="page-footer__social">
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#"><span class="visually-hidden">Наша страница в ВКонтакте</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Наш канал на Youtube</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="#"><span class="visually-hidden">Наш Telegram</span></a>
+          </li>
+        </ul>
+      </div>
 
-      <p class="page-footer__copyright">
-        <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy <img src="img/html-academy.svg" alt="" width="27" height="34"></a>
-      </p>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+          <img class="copyright__logo" src="img/html-academy.svg" alt="" width="27" height="34">
+        </a>
+      </div>
 
     </div>
   </footer>

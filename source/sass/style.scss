@@ -3,21 +3,18 @@
 @use "./global/global.scss";
 
 /* Базовые блоки */
-@use "./blocks/page.scss";
 @use "./blocks/container.scss";
 @use "./blocks/button.scss";
 
 /* Header и Footer */
-@use "./blocks/page-header.scss";
-@use "./blocks/logo.scss";
+@use "./blocks/header-logo.scss";
 @use "./blocks/site-menu.scss";
-@use "./blocks/page-footer.scss";
+@use "./blocks/menu-toggler.scss";
+@use "./blocks/page-header.scss";
 @use "./blocks/social.scss";
+@use "./blocks/copyright.scss";
+@use "./blocks/page-footer.scss";
 @use "./blocks/contacts.scss";
-
-/* Для всех страниц */
-@use "./blocks/page-main.scss";
-@use "./blocks/main-header.scss";
 
 /* Блоки Главной */
 @use "./blocks/promo.scss";
@@ -33,3 +30,8 @@
 @use "./blocks/catalog.scss";
 @use "./blocks/product-preview.scss";
 @use "./blocks/additional-products.scss";
+
+/* Для всех страниц */
+@use "./blocks/page.scss";
+@use "./blocks/page-main.scss";
+@use "./blocks/main-header.scss";

@@ -1,3 +1,5 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
 .programs {
   padding: 0 20px;
 }
@@ -9,22 +11,31 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .programs__item {
   padding: 24px 20px 22px;
-  background-color: #f2f2f2;
+  background-color: $basic-grey;
 }
 
 .programs__title {
   margin: 0;
   margin-bottom: 29px;
-  font-family: "Oswald", sans-serif;
+  font-family: $accent-font;
   font-weight: 400;
   font-size: 24px;
   line-height: 1.54;
   text-transform: uppercase;
-  color: #000000;
+  color: $dark-text;
 }
 
 .programs__item p {
@@ -34,10 +45,10 @@
 
 .programs__link {
   display: inline-block;
-  font-family: "Oswald", sans-serif;
+  font-family: $accent-font;
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
-  color: #000000;
+  color: $dark-text;
   text-decoration: none;
 }

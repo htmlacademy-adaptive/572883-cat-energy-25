@@ -1,18 +1,30 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
 .page {
   height: 100%;
 }
 
 .page__body {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100%;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: $base-font;
   font-size: 14px;
   line-height: 1.29;
-  color: #444444;
+  color: $text-color;
   background-color: #ffffff;
   min-width: 320px;
+}
+
+.page__header {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 
 .page__main {

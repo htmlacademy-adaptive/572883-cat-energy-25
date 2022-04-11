@@ -1,3 +1,5 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
 .about-product {
   padding: 0 20px;
 }
@@ -5,11 +7,11 @@
 .about-product__title {
   margin: 0;
   margin-bottom: 40px;
-  font-family: "Oswald", sans-serif;
+  font-family: $accent-font;
   font-size: 36px;
   font-weight: normal;
   line-height: 1.11;
-  color: #000000;
+  color: $dark-text;
 }
 
 .about-product__list {
@@ -19,4 +21,14 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 77px;
+  }
 }

@@ -1,16 +1,38 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
 .example {
   padding: 25px 20px 40px;
-  background-color: #eaeaea;
+  background-image: linear-gradient($basic-grey, $basic-grey);
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 55px;
+    background-position: top 621px center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 65px;
+    background-position: top 136px center;
+  }
+}
+
+.example__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .example__title {
   margin: 0;
   margin-bottom: 40px;
-  font-family: "Oswald", sans-serif;
+  font-family: $accent-font;
   font-size: 36px;
   font-weight: normal;
   line-height: 1.11;
-  color: #000000;
+  color: $dark-text;
 }
 
 .example p {

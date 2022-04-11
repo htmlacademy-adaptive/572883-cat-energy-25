@@ -1,0 +1,33 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.header-logo {
+  position: relative;
+  display: flex;
+}
+
+.header-logo__small-img {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header-logo__name {
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header-logo__img {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}

@@ -1,25 +1,98 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
 .promo {
-  padding: 27px 20px;
-  background-color: #68b738;
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
   color: #ffffff;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    color: $dark-text;
+    text-align: left;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 300px;
+    z-index: -1;
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/promo/promo-bg.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      content: "";
+      left: 50%;
+      height: 100%;
+    }
+  }
+}
+
+.promo__container {
+  padding-top: 27px;
+  background-image: url("../img/promo/promo-images.png");
+  background-repeat: no-repeat;
+  background-position: center bottom 43px;
+  background-size: 280px 270px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 140px;
+    padding-bottom: 526px;
+    background-position: center bottom;
+    background-size: contain;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 223px;
+    padding-bottom: 185px;
+    background-position: top 141px left 448px;
+    background-size: 552px 499px;
+  }
 }
 
 .promo__title {
   margin: 0;
   margin-bottom: 25px;
-  font-family: "Oswald", sans-serif;
+  font-family: $accent-font;
   font-size: 36px;
   font-weight: normal;
   line-height: 1;
-  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    margin-bottom: 41px;
+  }
 }
 
 .promo__slogan {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 300px;
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
-  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    margin-bottom: 49px;
+  }
+}
+
+.promo__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
 }
