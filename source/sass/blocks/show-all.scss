@@ -1,0 +1,46 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.show-all {
+  padding: 20px 20px 25px 20px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border: 2px solid $basic-grey;
+  }
+}
+
+.show-all__title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-family: $accent-font;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $dark-text;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.show-all p {
+  margin: 0;
+  margin-bottom: 21px;
+  font-size: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: auto;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.show-all__button {
+  width: 100%;
+}

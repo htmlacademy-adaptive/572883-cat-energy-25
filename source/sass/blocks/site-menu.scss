@@ -7,7 +7,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-  color: $dark-text;
+  color: $black-text;
   text-transform: uppercase;
   text-align: center;
   list-style-type: none;
@@ -25,7 +25,12 @@
 
   @media (min-width: $desktop-width) {
     font-size: 20px;
-    color: #ffffff;
+  }
+
+  &--home {
+    @media (min-width: $desktop-width) {
+      color: #ffffff;
+    }
   }
 }
 

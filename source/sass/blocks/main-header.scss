@@ -1,12 +1,36 @@
-.main-header {
-  padding: 27px 20px 41px;
+@use "./global/variables.scss" as *; /* Переменные */
+
+.main-header__container {
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .main-header__title {
   margin: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: $accent-font;
   font-size: 36px;
   font-weight: normal;
   line-height: 1;
-  color: #000000;
+  color: $black-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    margin-bottom: 54px;
+  }
+}
+
+.main-header__intro {
+  margin: 0;
+  margin-top: 37px;
+  font-family: $accent-font;
+  text-transform: uppercase;
+  color: $black-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
