@@ -1,0 +1,54 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.basic-preview {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.basic-preview__images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.basic-preview__images img {
+  display: block;
+}
+
+.basic-preview__content {
+  width: 50%;
+  flex-grow: 1;
+}
+
+.basic-preview__title {
+  width: 80px;
+  margin: 0;
+  margin-bottom: 18px;
+  font-family: $accent-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  a {
+    color: $dark-text;
+    text-decoration: none;
+  }
+}
+
+.basic-preview__list {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.basic-preview__list dd {
+  margin: 0;
+  text-align: right;
+}
+
+.basic-preview__button {
+  margin-top: 13px;
+  width: 100%;
+}

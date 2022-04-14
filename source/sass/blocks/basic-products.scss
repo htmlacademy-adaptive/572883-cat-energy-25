@@ -1,0 +1,42 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.basic-products {
+  border-top: 1px solid $light-line;
+  border-bottom: 1px solid $light-line;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.basic-products__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 60px 80px;
+  }
+}
+
+.basic-products__item {
+  padding: 20px 20px 25px 20px;
+  border-bottom: 1px solid $light-line;
+
+  &:last-child {
+    border: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 40px;
+    border: none;
+    background-color: $basic-grey;
+  }
+}

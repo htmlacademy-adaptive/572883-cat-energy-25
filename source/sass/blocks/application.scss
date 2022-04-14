@@ -1,11 +1,25 @@
-.application {
-  padding: 0 20px;
+@use "./global/variables.scss" as *; /* Переменные */
+
+.application__page-header {
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 74px;
+  }
 }
 
-.application__intro {
-  margin: 0;
+.application__main-header {
   margin-bottom: 39px;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  color: #000000;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+  }
+}
+
+.application__content {
+  padding: 0 20px;
 }

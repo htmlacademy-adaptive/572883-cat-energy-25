@@ -16,14 +16,9 @@
   color: $text-color;
   background-color: #ffffff;
   min-width: 320px;
-}
 
-.page__header {
   @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    font-size: 16px;
   }
 }
 

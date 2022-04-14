@@ -1,19 +1,93 @@
-.additional-products {
+@use "./global/variables.scss" as *; /* Переменные */
+
+.additional-products__container {
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .additional-products__title {
   margin: 0;
   margin-bottom: 36px;
-  font-family: "Oswald", sans-serif;
+  font-family: $accent-font;
   font-weight: 400;
   font-size: 24px;
   line-height: 1;
-  color: #000000;
+  color: $black-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .additional-products__list {
   margin: 0;
+  margin-bottom: 35px;
   padding: 0;
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 900px;
+    margin-right: auto;
+    margin-bottom: 0;
+    border-right: none;
+    border-left: none;
+  }
+}
+
+.additional-products__item {
+  padding: 12px 0 19px;
+  border-bottom: 1px solid #cdcdcd;
+
+  &:last-child {
+    border: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0;
+  }
+}
+
+.additional-products__offer {
+  display: block;
+  padding: 187px 40px 43px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
+
+  @media (min-width: $tablet-width) {
+    padding: 70px 124px 70px 422px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    padding: 187px 40px 43px;
+    text-align: center;
+  }
 }

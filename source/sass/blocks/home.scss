@@ -1,8 +1,15 @@
 @use "./global/variables.scss" as *; /* Переменные */
 
-/* Для главной */
+.home__page-header {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
 
-.page-main__promo {
+.home__promo {
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
@@ -14,7 +21,7 @@
   }
 }
 
-.page-main__programs {
+.home__programs {
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
@@ -26,7 +33,7 @@
   }
 }
 
-.page-main__about-product {
+.home__about-product {
   margin-bottom: 49px;
 
   @media (min-width: $tablet-width) {
@@ -40,20 +47,4 @@
     margin-bottom: 26px;
     border-bottom: none;
   }
-}
-
-/* Страница Заявки */
-
-.page-main__application {
-  margin-bottom: 32px;
-}
-
-/* Каталог */
-
-.page-main__catalog {
-  margin-bottom: 25px;
-}
-
-.page-main__additional-products {
-  margin-bottom: 35px;
 }
