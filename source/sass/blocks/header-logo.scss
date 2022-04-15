@@ -5,8 +5,22 @@
   display: flex;
 }
 
+.header-logo__link {
+  transition: opacity 0.2s ease-in-out;
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
+}
+
 .header-logo__small-img {
   display: block;
+  max-width: 34px;
+  max-height: 38px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -15,9 +29,11 @@
 
 .header-logo__name {
   position: absolute;
-  top: 13px;
+  top: 12px;
   left: 50%;
   transform: translateX(-50%);
+  max-width: 101px;
+  max-height: 18px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -29,5 +45,10 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 203px;
+    height: 60px;
   }
 }
