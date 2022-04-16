@@ -97,13 +97,18 @@
 }
 
 .about-product__item::after {
-  position: absolute;
-  z-index: -1;
-  top: -40px;
-  font-family: $accent-font;
-  font-size: 280px;
-  line-height: 280px;
-  color: #f2f2f2;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: -40px;
+    z-index: -1;
+    display: block;
+    font-family: $accent-font;
+    font-size: 280px;
+    line-height: 280px;
+    color: #f2f2f2;
+  }
 }
 
 .about-product__item--item-1::after {
