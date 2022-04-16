@@ -7,20 +7,37 @@
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
-  color: #444444;
+  color: $text-color;
   text-align: center;
   text-decoration: none;
   background-color: #f2f2f2;
   border: none;
   cursor: pointer;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
 
-  &--accent {
-    color: #ffffff;
-    background-color: $accent;
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba($text-color, 0.3);
   }
 
   @media (min-width: $tablet-width) {
     padding: 17px 26px;
     font-size: 20px;
+  }
+}
+
+.button--accent {
+  color: #ffffff;
+  background-color: $accent;
+
+  &:hover {
+    background-color: $accent--dark;
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
   }
 }

@@ -18,11 +18,11 @@
     top: 0;
     right: 0;
     left: 0;
-    height: 300px;
+    height: 302px;
     z-index: -1;
     background-image:
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-      url("../img/promo/promo-bg.jpg");
+      url("../img/promo/promo-bg-small.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     background-position: center;
@@ -35,12 +35,16 @@
       content: "";
       left: 50%;
       height: 100%;
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/promo/promo-bg.jpg");
+      background-position: left center;
     }
   }
 }
 
 .promo__container {
-  padding-top: 27px;
+  padding-top: 25px;
   background-image: url("../img/promo/promo-images.png");
   background-repeat: no-repeat;
   background-position: center bottom 43px;
@@ -48,14 +52,18 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 140px;
+    padding-right: 90px;
     padding-bottom: 526px;
+    padding-left: 90px;
     background-position: center bottom;
     background-size: contain;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 223px;
+    padding-right: 80px;
     padding-bottom: 185px;
+    padding-left: 80px;
     background-position: top 141px left 448px;
     background-size: 552px 499px;
   }
@@ -63,7 +71,7 @@
 
 .promo__title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   font-family: $accent-font;
   font-size: 36px;
   font-weight: normal;
@@ -77,8 +85,8 @@
 
 .promo__slogan {
   margin: 0;
-  margin-bottom: 300px;
-  font-family: "Oswald", sans-serif;
+  margin-bottom: 303px;
+  font-family: $accent-font;
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
@@ -86,6 +94,10 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 51px;
   }
 }
 
