@@ -16,12 +16,19 @@
   }
 }
 
+.contacts__container {
+  @media (min-width: $desktop-width) {
+    height: 0;
+  }
+}
+
 .contacts__content {
   display: flex;
+  justify-content: space-between;
   padding: 26px 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 56px 0;
+    padding: 60px 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -39,6 +46,11 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $black-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__address {
@@ -48,6 +60,11 @@
 
   @media (min-width: $tablet-width) {
     text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 155px;
+    text-align: left;
   }
 }
 

@@ -7,14 +7,14 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
-    padding-bottom: 55px;
-    background-position: top 621px center;
+    padding-bottom: 60px;
+    background-position: bottom center;
+    background-size: 100% 462px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 0;
-    padding-bottom: 65px;
-    background-position: top 136px center;
+    padding-bottom: 70px;
   }
 }
 
@@ -22,6 +22,13 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+
+.example__content {
+  @media (min-width: $desktop-width) {
+    padding-top: 48px;
   }
 }
 
@@ -31,11 +38,87 @@
   font-family: $accent-font;
   font-size: 36px;
   font-weight: normal;
-  line-height: 1.11;
+  line-height: 40px;
   color: $black-text;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 148px;
+  }
 }
 
-.example p {
+.example__intro {
   margin: 0;
   margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 436px;
+    margin-bottom: 68px;
+  }
+}
+
+.example__achievement-wrap {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-bottom: 0;
+  }
+}
+
+.example__achievement-list {
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
+}
+
+.example__expenses {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-family: $accent-font;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black-text;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    max-width: 180px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    max-width: 327px;
+    text-align-last: left;
+  }
 }

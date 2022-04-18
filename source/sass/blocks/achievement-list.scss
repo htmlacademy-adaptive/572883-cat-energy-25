@@ -1,0 +1,67 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.achievement-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.achievement-list__item {
+  position: relative;
+  padding: 14px 15px 16px;
+  margin-right: 32px;
+  width: 124px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    padding: 15px 15px 18px;
+    margin-right: 42px;
+  }
+}
+
+.achievement-list__title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -16px;
+  padding: 0 15px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  text-transform: lowercase;
+  background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    bottom: -7px;
+    padding: 0 8px;
+    font-size: 14px;
+    line-height: 14px;
+    white-space: nowrap;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-grey;
+  }
+}
+
+.achievement-list__value {
+  margin: 0;
+  font-family: $accent-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: $black-text;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}

@@ -114,37 +114,49 @@
         <div class="example__content">
           <h2 class="example__title">Живой пример</h2>
 
-          <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <p class="example__intro">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по‑прежнему спит по 16 часов в день.</p>
 
-          <dl class="example__list">
-            <div class="example__item">
-              <dt>Снижение веса</dt>
-              <dd>5 кг</dd>
-            </div>
+          <div class="example__achievement-wrap">
+            <dl class="achievement-list example__achievement-list">
+              <div class="achievement-list__item">
+                <dt class="achievement-list__title">Снижение веса</dt>
+                <dd class="achievement-list__value">5 кг</dd>
+              </div>
 
-            <div class="example__item">
-              <dt>Затрачено времени</dt>
-              <dd>60 дней</dd>
-            </div>
-          </dl>
+              <div class="achievement-list__item">
+                <dt class="achievement-list__title">Затрачено времени</dt>
+                <dd class="achievement-list__value">60 дней</dd>
+              </div>
+            </dl>
 
-          <p class="example__expenses">Затраты на питание: <span>15 000 руб.</span></p>
+            <p class="example__expenses">Затраты на питание: <span>15 000 руб.</span></p>
+          </div>
+
         </div>
 
         <div class="comparison-slider example__slider">
+
           <ul class="comparison-slider__list">
-            <li class="comparison-slider__item">
+
+            <li class="comparison-slider__item comparison-slider__item--before comparison-slider__item--active" style="width: 50%;">
               <img src="img/example/cat-fat.png" alt="Борис до того, как он начал есть корм Cat Energy." width="280" height="232">
             </li>
-            <li class="comparison-slider__item" hidden>
+
+            <li class="comparison-slider__item comparison-slider__item--after" style="width: 50%;">
               <img src="img/example/cat-skinny.png" alt="Борис после того, как он начал есть корм Cat Energy." width="280" height="232">
             </li>
+
           </ul>
 
-          <div class="comparison-slider__control">
-            <button class="comparison-slider__button" type="button">Было</button>
-            <button class="comparison-slider__toggler" type="button" tabindex="-1"></button>
-            <button class="comparison-slider__button" type="button">Стало</button>
+          <div class="comparison-slider__control" aria-hidden="true">
+
+            <button class="comparison-slider__button comparison-slider__button--before" type="button">Было</button>
+
+            <div class="comparison-slider__scrollbar">
+              <button class="comparison-slider__toggler" type="button" tabindex="-1" style="left: 50%;"></button>
+            </div>
+
+            <button class="comparison-slider__button comparison-slider__button--after" type="button">Стало</button>
           </div>
         </div>
       </div>
@@ -166,7 +178,9 @@
         </div>
       </div>
 
-      <div class="contacts__map"></div>
+      <div class="contacts__map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acf4647883fcb539aa11707fc67d8d56fd44be4d65e3d60a541c707047ff53332&amp;width=100%25&amp;height=100%&amp;lang=ru_RU"></script>
+      </div>
     </section>
 
   </main>
