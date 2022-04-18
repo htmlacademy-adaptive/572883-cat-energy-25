@@ -1,5 +1,38 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
 .social {
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.social__item {
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 40px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px 22px;
+
+  &--vk {
+    background-image: url("../img/social/vkontakte.svg");
+  }
+
+  &--youtube {
+    background-image: url("../img/social/youtube.svg");
+  }
+
+  &--telegram {
+    background-image: url("../img/social/telegram.svg");
+  }
 }
