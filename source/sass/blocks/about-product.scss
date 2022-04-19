@@ -1,7 +1,11 @@
 @use "./global/variables.scss" as *; /* Переменные */
 
 .about-product {
-  padding: 0 20px;
+  padding: 0 $mobile-side-indent;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .about-product__title {
@@ -10,8 +14,14 @@
   font-family: $accent-font;
   font-size: 36px;
   font-weight: normal;
-  line-height: 1.11;
+  line-height: 40px;
   color: $black-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 73px;
+  }
 }
 
 .about-product__list {
@@ -24,11 +34,119 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
-    gap: 37px;
+    gap: 90px 60px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 77px;
+    gap: 80px;
+  }
+}
+
+.about-product__item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 43px;
+    padding-right: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
+}
+
+.about-product__item::before {
+  content: "";
+  display: block;
+  width: 60px;
+  flex-shrink: 0;
+  height: 60px;
+  margin-right: 20px;
+  background-color: $accent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px 60px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+}
+
+.about-product__item--item-1::before {
+  background-image: url("../img/about-product/about-product-1.svg");
+}
+
+.about-product__item--item-2::before {
+  background-image: url("../img/about-product/about-product-2.svg");
+}
+
+.about-product__item--item-3::before {
+  background-image: url("../img/about-product/about-product-3.svg");
+}
+
+.about-product__item--item-4::before {
+  background-image: url("../img/about-product/about-product-4.svg");
+}
+
+.about-product__item::after {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: -40px;
+    z-index: -1;
+    display: block;
+    font-family: $accent-font;
+    font-size: 280px;
+    line-height: 280px;
+    color: #f2f2f2;
+  }
+}
+
+.about-product__item--item-1::after {
+  content: "1";
+  right: 100px;
+
+  @media (min-width: $desktop-width) {
+    right: 21px;
+  }
+}
+
+.about-product__item--item-2::after {
+  content: "2";
+  right: 79px;
+
+  @media (min-width: $desktop-width) {
+    right: 0;
+  }
+}
+
+.about-product__item--item-3::after {
+  content: "3";
+  right: 77px;
+
+  @media (min-width: $desktop-width) {
+    right: -2px;
+  }
+}
+
+.about-product__item--item-4::after {
+  content: "4";
+  right: 76px;
+
+  @media (min-width: $desktop-width) {
+    right: -4px;
   }
 }

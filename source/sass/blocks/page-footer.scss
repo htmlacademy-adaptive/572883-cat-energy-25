@@ -1,8 +1,12 @@
 @use "./global/variables.scss" as *; /* Переменные */
 
 .page-footer {
-  padding: 39px 20px 22px;
+  padding: 37px $mobile-side-indent 22px;
   background: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 56px 0;
+  }
 }
 
 .page-footer__container {
@@ -16,19 +20,24 @@
 .page-footer__logo {
   display: flex;
   justify-content: center;
-  padding-bottom: 32px;
+  padding-bottom: 31px;
   border-bottom: 1px solid $light-line;
 
   @media (min-width: $tablet-width) {
+    justify-content: start;
     padding-bottom: 0;
     border-bottom: none;
   }
 }
 
+.page-footer__logo img {
+  display: block;
+}
+
 .page-footer__social {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 16px 0;
   border-bottom: 1px solid $light-line;
 
   @media (min-width: $tablet-width) {
@@ -38,6 +47,11 @@
 }
 
 .page-footer__copyright {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  line-height: 18px;
   margin-top: 22px;
 
   @media (min-width: $tablet-width) {

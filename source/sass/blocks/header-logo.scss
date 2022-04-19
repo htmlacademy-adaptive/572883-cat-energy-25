@@ -2,11 +2,29 @@
 
 .header-logo {
   position: relative;
-  display: flex;
+
+  @media (max-width: $only-mobile-width) {
+    min-width: 200px;
+    width: 100%;
+  }
+}
+
+.header-logo__link {
+  transition: opacity 0.2s ease-in-out;
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
 }
 
 .header-logo__small-img {
   display: block;
+  width: 34px;
+  height: 38px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -15,9 +33,11 @@
 
 .header-logo__name {
   position: absolute;
-  top: 13px;
+  top: 12px;
   left: 50%;
   transform: translateX(-50%);
+  width: 101px;
+  height: 18px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -29,5 +49,12 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 203px;
+    height: 60px;
   }
 }

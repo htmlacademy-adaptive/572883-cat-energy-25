@@ -15,5 +15,8 @@ $base-font: "Arial", sans-serif;
 $accent-font: "Oswald", "Arial", sans-serif;
 
 // Viewports
+$mobile-max-width: 400px;
+$mobile-side-indent: 6.25%;
 $tablet-width: 768px;
+$only-mobile-width: $tablet-width - 1px;
 $desktop-width: 1280px;
