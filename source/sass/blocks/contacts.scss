@@ -25,10 +25,10 @@
 .contacts__content {
   display: flex;
   justify-content: space-between;
-  padding: 26px 20px;
+  padding: 26px $mobile-side-indent;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 40px;
+    padding: 56px 40px 61px;
   }
 
   @media (min-width: $desktop-width) {
@@ -50,6 +50,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 26px;
+    margin-top: 4px;
   }
 }
 

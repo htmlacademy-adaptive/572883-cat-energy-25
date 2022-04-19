@@ -3,11 +3,12 @@
 .promo {
   position: relative;
   z-index: 1;
-  padding: 0 20px;
+  padding: 0 $mobile-side-indent;
   color: #ffffff;
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    padding: 0;
     color: $black-text;
     text-align: left;
   }

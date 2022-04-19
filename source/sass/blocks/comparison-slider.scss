@@ -114,67 +114,72 @@
   border-color: transparent;
 }
 
-@media (max-width: $only-mobile-width) {
-  .comparison-slider__scrollbar {
-    display: flex;
-    align-items: center;
-    padding: 0 5px;
-    margin: 0 13px;
-    width: 86px;
-    height: 14px;
-    background-color: #ffffff;
-    border: 1px solid #cdcdcd;
-    border-radius: 6px;
-    cursor: pointer;
-  }
+.comparison-slider__toggler {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  margin: 0 13px;
+  width: 86px;
+  height: 14px;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+  cursor: pointer;
 
-  .comparison-slider__scrollbar--active {
-    justify-content: end;
-  }
-
-  .comparison-slider__toggler {
-    display: block;
-    width: 36px;
-    height: 6px;
-    background-color: $accent;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
-@media (min-width: $tablet-width) {
-  .comparison-slider__scrollbar {
-    position: relative;
-    flex-grow: 1;
-    height: 6px;
-    margin-left: 13px;
-    margin-right: 13px;
-    background-color: #dcdcdc;
-    border-radius: 6px;
-  }
+.comparison-slider__toggler--active {
+  justify-content: end;
+}
 
-  .comparison-slider__toggler {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    background-color: #ffffff;
-    border: 1px solid #cdcdcd;
-    border-radius: 50%;
-    cursor: pointer;
-  }
+.comparison-slider__toggler::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 6px;
+  background-color: $accent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-  .comparison-slider__toggler::after {
-    content: "";
-    display: block;
-    width: 8px;
-    height: 8px;
-    background-color: $accent;
-    border-radius: 50%;
+.comparison-slider__scrollbar {
+  position: relative;
+  flex-grow: 1;
+  height: 6px;
+  margin-left: 13px;
+  margin-right: 13px;
+  background-color: #dcdcdc;
+  border-radius: 6px;
+
+  @media (max-width: $only-mobile-width) {
+    display: none;
   }
+}
+
+.comparison-slider__scroller {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.comparison-slider__scroller::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: $accent;
+  border-radius: 50%;
 }

@@ -22,8 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let sliderBeforeItem = document.querySelector(".comparison-slider__item--before");
   let sliderAfterItem = document.querySelector(".comparison-slider__item--after");
-  let sliderScrollbar = document.querySelector(".comparison-slider__scrollbar");
+
+
   let sliderToggler  = document.querySelector(".comparison-slider__toggler");
+  let sliderScroller = document.querySelector(".comparison-slider__scroller");
+
   let sliderBeforeButton = document.querySelector(".comparison-slider__button--before");
   let sliderAfterButton = document.querySelector(".comparison-slider__button--after");
 
@@ -34,13 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
       sliderBeforeItem.classList.add("comparison-slider__item--active");
       sliderAfterItem.classList.remove("comparison-slider__item--active");
 
-      sliderScrollbar.classList.remove("comparison-slider__scrollbar--active");
+      sliderToggler.classList.remove("comparison-slider__toggler--active");
 
     }
 
     sliderBeforeItem.style.width = "100%";
     sliderAfterItem.style.width = "0";
-    sliderToggler.style.left = "0";
+    sliderScroller.style.left = "0";
 
   }
 
@@ -51,17 +54,35 @@ document.addEventListener("DOMContentLoaded", function () {
       sliderAfterItem.classList.add("comparison-slider__item--active");
       sliderBeforeItem.classList.remove("comparison-slider__item--active");
 
-      sliderScrollbar.classList.add("comparison-slider__scrollbar--active");
+      sliderToggler.classList.add("comparison-slider__toggler--active");
 
     }
 
     sliderBeforeItem.style.width = "0";
     sliderAfterItem.style.width = "100%";
-    sliderToggler.style.left = "100%";
+    sliderScroller.style.left = "100%";
 
   }
 
   sliderBeforeButton.onclick = switchToBefore;
   sliderAfterButton.onclick = switchToAfter;
+
+  sliderToggler.onclick = function () {
+    if ( this.classList.contains("comparison-slider__toggler--active") ) {
+      switchToBefore();
+    } else {
+      switchToAfter();
+    }
+  };
+
+  sliderScroller.onclick = function () {
+    sliderBeforeItem.style.width = "50%";
+    sliderAfterItem.style.width = "50%";
+    sliderScroller.style.left = "50%";
+
+    sliderAfterItem.classList.add("comparison-slider__item--active");
+    sliderBeforeItem.classList.remove("comparison-slider__item--active");
+    sliderToggler.classList.remove("comparison-slider__toggler--active");
+  }
 
 });

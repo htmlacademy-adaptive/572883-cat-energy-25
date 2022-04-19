@@ -1,20 +1,18 @@
 @use "./global/variables.scss" as *; /* Переменные */
 
 .example {
-  padding: 25px 20px 40px;
+  padding: 25px $mobile-side-indent 40px;
   background-image: linear-gradient($basic-grey, $basic-grey);
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
-    padding-top: 0;
-    padding-bottom: 60px;
+    padding: 0 0 60px;
     background-position: bottom center;
     background-size: 100% 462px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 0;
-    padding-bottom: 70px;
+    padding: 0 0 70px;
   }
 }
 
@@ -71,11 +69,11 @@
 }
 
 .example__achievement-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 80px;
   }
 
@@ -86,6 +84,7 @@
 }
 
 .example__achievement-list {
+  flex-grow: 1;
   margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
@@ -98,8 +97,10 @@
 }
 
 .example__expenses {
+  flex-grow: 1;
   margin-top: 0;
   margin-bottom: 40px;
+  padding: 0 32px;
   font-family: $accent-font;
   font-size: 14px;
   line-height: 20px;
@@ -109,6 +110,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+    padding: 0;
     max-width: 180px;
     font-size: 20px;
     line-height: 30px;
