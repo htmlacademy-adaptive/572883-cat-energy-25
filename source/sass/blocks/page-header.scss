@@ -3,101 +3,80 @@
 .page-header {
   position: relative;
   z-index: 2;
-  padding-top: 12px;
-  border-bottom: 1px solid $grey-line;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 24px;
-    border-bottom: none;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 53px;
-  }
-
-  &--home {
-    border-bottom: none;
-  }
-}
-
-.page-header__container {
-  max-width: 100%;
 }
 
 .page-header__navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  flex-wrap: wrap;
-
   @media (min-width: $tablet-width) {
-    flex-wrap: nowrap;
+    display: flex;
+    padding: 24px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 53px 0;
   }
 }
 
 .page-header__logo-wrap {
-  position: relative;
-  flex-shrink: 0;
-
   @media (max-width: $only-mobile-width) {
-    max-width: $mobile-max-width;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-right: 30px;
+    position: relative;
+    padding: 12px $mobile-side-indent 15px;
   }
 }
 
 .page-header__menu-toggler {
-  display: none;
+  position: absolute;
+  top: 12px;
+  right: $mobile-side-indent;
+  transform: translateX(7px); // Сдвиг на величину правого паддинга кнопки
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__site-menu {
-  margin-top: 15px;
-  width: 100%;
-
-  @media (min-width: $tablet-width) {
-    margin-top: 8px;
-    width: auto;
-    flex-grow: 1;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 50%;
-    margin-top: 10px;
-  }
-}
-
-/* Если есть JS добавить класс .page-header--ready для Меню сайта */
-
-@media (max-width: $only-mobile-width) {
-  .page-header--ready {
-    padding-bottom: 15px;
-  }
-
-  .page-header--ready .page-header__site-menu {
+  @media (max-width: $only-mobile-width) {
     position: absolute;
     top: 100%;
     left: 0;
+    width: 100%;
     margin-top: 0;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
   }
 
-  .page-header--ready .page-header__site-menu--opened {
-    opacity: 1;
-    visibility: visible;
+  @media (min-width: $tablet-width) {
+    margin-top: 8px;
+    width: auto;
+    flex-grow: 1;
+    margin-left: 60px;
   }
 
-  .page-header--ready .page-header__menu-toggler {
-    position: absolute;
-    top: 0;
-    right: 13px;
-    display: block;
+  @media (min-width: $desktop-width) {
+    max-width: 50%;
+    margin-top: 10px;
+    margin-left: auto;
+  }
+}
+
+.page-header__site-menu--opened {
+  opacity: 1;
+  visibility: visible;
+}
+
+.page-header--nojs .page-header__logo-wrap {
+  @media (max-width: $only-mobile-width) {
+    padding-bottom: 0;
+  }
+}
+
+.page-header--nojs .page-header__site-menu {
+  @media (max-width: $only-mobile-width) {
+    position: static;
+    margin-top: 15px;
+    opacity: 1;
+    visibility: visible;
   }
 }

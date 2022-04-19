@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let pageHeader = document.querySelector('.page-header');
   let menuToggler = pageHeader.querySelector('.menu-toggler');
-  let headerSiteMenu = pageHeader.querySelector('.site-menu');
+  let headerSiteMenu = pageHeader.querySelector('.page-header__site-menu');
 
-  pageHeader.classList.add("page-header--ready");
+  pageHeader.classList.remove("page-header--nojs");
 
   menuToggler.onclick = function () {
     if ( headerSiteMenu.classList.contains("page-header__site-menu--opened") ) {

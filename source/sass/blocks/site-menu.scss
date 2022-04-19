@@ -36,10 +36,6 @@
 }
 
 .site-menu__item {
-  @media (max-width: $only-mobile-width) {
-    border-bottom: 1px solid $light-line;
-  }
-
   @media (min-width: $tablet-width) {
     position: relative;
     margin-right: 16px;
@@ -69,13 +65,11 @@
   }
 }
 
-
 .site-menu a {
   display: block;
-  max-width: $mobile-max-width;
   margin-left: auto;
   margin-right: auto;
-  padding: 23px 20px 22px;
+  padding: 23px $mobile-side-indent 22px;
   color: inherit;
   text-decoration: none;
   transition: opacity 0.2s ease-out;
@@ -86,6 +80,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (max-width: $only-mobile-width) {
+    border-bottom: 1px solid $light-line;
   }
 
   @media (min-width: $tablet-width) {

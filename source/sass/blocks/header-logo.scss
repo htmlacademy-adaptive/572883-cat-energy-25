@@ -2,7 +2,11 @@
 
 .header-logo {
   position: relative;
-  display: flex;
+
+  @media (max-width: $only-mobile-width) {
+    min-width: 200px;
+    width: 100%;
+  }
 }
 
 .header-logo__link {
@@ -19,8 +23,8 @@
 
 .header-logo__small-img {
   display: block;
-  max-width: 34px;
-  max-height: 38px;
+  width: 34px;
+  height: 38px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -32,8 +36,8 @@
   top: 12px;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 101px;
-  max-height: 18px;
+  width: 101px;
+  height: 18px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -45,6 +49,8 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    width: 174px;
+    height: 52px;
   }
 
   @media (min-width: $desktop-width) {
