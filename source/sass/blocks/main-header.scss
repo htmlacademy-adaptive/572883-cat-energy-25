@@ -1,7 +1,7 @@
 @use "./global/variables.scss" as *; /* Переменные */
 
 .main-header__container {
-  padding: 0 20px;
+  padding: 0 $mobile-side-indent;
 
   @media (min-width: $tablet-width) {
     padding: 0;

@@ -12,7 +12,7 @@
 
 <body class="page__body application">
 
-  <header class="page-header application__page-header">
+  <header class="page-header page-header--nojs application__page-header">
     <div class="container page-header__container">
       <nav class="page-header__navigation">
 
@@ -36,17 +36,20 @@
 
         </div>
 
-        <ul class="page-header__site-menu site-menu">
-          <li class="site-menu__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="site-menu__item">
-            <a href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="site-menu__item site-menu__item--current">
-            <a>Подбор программы</a>
-          </li>
-        </ul>
+        <div class="page-header__site-menu">
+          <ul class="site-menu">
+            <li class="site-menu__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-menu__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-menu__item site-menu__item--current">
+              <a>Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+
       </nav>
     </div>
   </header>
@@ -54,7 +57,7 @@
   <main class="page__main page-main">
 
     <header class="main-header application__main-header">
-      <div class="container">
+      <div class="container main-header__container">
 
         <h1 class="main-header__title">Подбор программы</h1>
 
@@ -193,6 +196,8 @@
 
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 
 </body>
 </html>
