@@ -1,0 +1,70 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.form-radio {
+  display: flex;
+  align-items: center;
+  font-family: $accent-font;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: $dark-text;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form-radio__pseudoinput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid #cdcdcd;
+  margin-right: 15px;
+  transition: border-color 0.2s ease-out;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+}
+
+.form-radio__pseudoinput::before {
+  content: "";
+  display: block;
+  width: 13.5px;
+  height: 13.5px;
+  border-radius: 50%;
+  background-color: $accent;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.form-radio__input:checked ~ .form-radio__pseudoinput::before {
+  opacity: 1;
+}
+
+.form-radio:hover .form-radio__pseudoinput {
+  border-color: #bababa;
+}
+
+.form-radio:focus-within .form-radio__pseudoinput {
+  border-color: $text-color;
+  outline: 1px solid $text-color;
+}
+
+.form-radio:disabled,
+.form-radio--disabled {
+  opacity: 0.3;
+}

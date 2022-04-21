@@ -4,11 +4,11 @@
   margin-bottom: 27px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 64px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 74px;
+    margin-bottom: 20px;
   }
 }
 
@@ -16,10 +16,10 @@
   margin-bottom: 39px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 66px;
+    margin-bottom: 67px;
   }
-}
 
-.application__content {
-  padding: 0 20px;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 65px;
+  }
 }
