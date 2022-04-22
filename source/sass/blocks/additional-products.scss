@@ -1,7 +1,7 @@
 @use "./global/variables.scss" as *; /* Переменные */
 
 .additional-products__container {
-  padding: 0 20px;
+  padding: 0 $mobile-side-indent;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -15,7 +15,9 @@
 
 .additional-products__title {
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
+  margin-right: -20px;
+  margin-left: -20px;
   font-family: $accent-font;
   font-weight: 400;
   font-size: 24px;
@@ -25,6 +27,8 @@
   @media (min-width: $tablet-width) {
     font-size: 36px;
     margin-bottom: 80px;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -32,9 +36,38 @@
   }
 }
 
+.additional-products__title span {
+  display: inline-block;
+  padding: 0 20px;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: -40px;
+  }
+}
+
+.additional-products__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: translateY(16px);
+  z-index: -1;
+  width: 100%;
+  height: 2px;
+  background-color: $accent;
+
+  @media (min-width: $tablet-width) {
+    transform: translateY(23px);
+  }
+}
+
 .additional-products__list {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
   padding: 0;
   border-top: 1px solid #cdcdcd;
   border-bottom: 1px solid #cdcdcd;
@@ -42,10 +75,11 @@
 
   @media (min-width: $tablet-width) {
     border: 1px solid #cdcdcd;
+    margin-bottom: 69px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 900px;
+    width: 896px;
     margin-right: auto;
     margin-bottom: 0;
     border-right: none;
@@ -54,23 +88,15 @@
 }
 
 .additional-products__item {
-  padding: 12px 0 19px;
   border-bottom: 1px solid #cdcdcd;
 
   &:last-child {
     border: none;
   }
-
-  @media (min-width: $tablet-width) {
-    padding: 26px 38px 28px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 15px 0;
-  }
 }
 
-.additional-products__offer {
+.additional-products__gift {
+  position: relative;
   display: block;
   padding: 187px 40px 43px;
   font-size: 16px;
@@ -89,5 +115,31 @@
     width: 245px;
     padding: 187px 40px 43px;
     text-align: center;
+  }
+}
+
+.additional-products__gift::before {
+  content: "";
+  position: absolute;
+  top: 59px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78px;
+  height: 80px;
+  background-image: url("../img/icons/gift.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 77px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 59px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

@@ -1,0 +1,62 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  font-family: $accent-font;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: $dark-text;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form-checkbox__pseudoinput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  margin-right: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    margin-right: 19px;
+  }
+}
+
+.form-checkbox__pseudoinput::before {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/icons/tick.svg");
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.form-checkbox__input:checked ~ .form-checkbox__pseudoinput::before {
+  opacity: 1;
+}
+
+.form-checkbox:hover .form-checkbox__pseudoinput {
+  border-color: #bababa;
+}
+
+.form-checkbox:focus-within .form-checkbox__pseudoinput {
+  border-color: $text-color;
+  outline: 1px solid $text-color;
+}
+
+.form-checkbox:disabled,
+.form-checkbox--disabled {
+  opacity: 0.3;
+}

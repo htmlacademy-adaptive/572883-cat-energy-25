@@ -3,29 +3,79 @@
 .basic-preview {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px $mobile-side-indent 25px;
+  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 38px 38px;
+    background-image: linear-gradient($basic-grey, $basic-grey);
+    background-repeat: no-repeat;
+    background-position: top 82px left;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 40px;
+  }
 }
 
 .basic-preview__images {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 50%;
+  justify-content: center;
+  width: 140px;
+  height: 112px;
   flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    align-items: end;
+    width: 168px;
+    height: 206px;
+    margin-bottom: 38px;
+  }
+}
+
+.basic-preview__images a {
+  display: block;
 }
 
 .basic-preview__images img {
   display: block;
+  width: 68px;
+  height: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 134px;
+  }
+}
+
+.basic-preview__images--big {
+  align-items: end;
+}
+
+.basic-preview__images--big img {
+  width: 84px;
+
+  @media (min-width: $tablet-width) {
+    width: 164px;
+  }
 }
 
 .basic-preview__content {
-  width: 50%;
-  flex-grow: 1;
+  width: 140px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .basic-preview__title {
   width: 80px;
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   font-family: $accent-font;
   font-weight: 400;
   font-size: 16px;
@@ -36,11 +86,32 @@
     color: $dark-text;
     text-decoration: none;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 150px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 21px;
+    margin-bottom: 20px;
+  }
 }
 
 .basic-preview__list {
   display: grid;
   grid-template-columns: auto auto;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .basic-preview__list dd {
@@ -48,7 +119,20 @@
   text-align: right;
 }
 
+.basic-preview__list dt,
+.basic-preview__list dd {
+  @media (min-width: $tablet-width) {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
 .basic-preview__button {
-  margin-top: 13px;
   width: 100%;
+  margin-top: 11px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 34px;
+  }
 }

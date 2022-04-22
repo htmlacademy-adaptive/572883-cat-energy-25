@@ -20,6 +20,7 @@
   @media (max-width: $only-mobile-width) {
     position: relative;
     padding: 12px $mobile-side-indent 15px;
+    border-bottom: 1px solid $basic-grey;
   }
 }
 

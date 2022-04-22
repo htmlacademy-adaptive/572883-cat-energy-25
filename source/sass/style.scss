@@ -7,6 +7,13 @@
 @use "./blocks/container.scss";
 @use "./blocks/button.scss";
 
+/* Компоненты Форм */
+
+@use "./blocks/form-components/form-field.scss";
+@use "./blocks/form-components/form-radio.scss";
+@use "./blocks/form-components/form-checkbox.scss";
+@use "./blocks/form-components/form-textarea.scss";
+
 /* Header и Footer */
 @use "./blocks/header-logo.scss";
 @use "./blocks/site-menu.scss";

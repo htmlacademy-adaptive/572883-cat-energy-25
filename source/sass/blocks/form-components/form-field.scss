@@ -1,0 +1,77 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.form-field {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  white-space: nowrap;
+  font-family: $accent-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form-field__input {
+  width: 0;
+  flex-grow: 1;
+  margin-left: 13px;
+  padding: 10px 15px 9px;
+  font-family: $accent-font;
+  font-size: 16px;
+  line-height: 18px;
+  border: 1px solid #e7e7e7;
+  transition: border-color 0.2s ease-out;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border: 1px solid $text-color;
+    outline: 1px solid $text-color;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border: 1px solid $error-color;
+    outline: 1px solid $error-color;
+  }
+
+  &--error {
+    border: 1px solid $error-color;
+    outline: 1px solid $error-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form-field__input::placeholder {
+  text-transform: uppercase;
+}
+
+.form-field--email .form-field__input {
+  padding-right: 45px;
+  background-image: url("../img/icons/email.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 15px;
+  background-position: right 15px center;
+}
+
+.form-field--tel .form-field__input {
+  padding-right: 45px;
+  background-image: url("../img/icons/phone.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 21px;
+  background-position: right 12px center;
+}
