@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       sliderBeforeItem.style.width = "100%";
       sliderAfterItem.style.width = "0";
-      sliderScroller.style.left = "0";
+      sliderScroller.style.left = "100%";
 
     }
 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       sliderBeforeItem.style.width = "0";
       sliderAfterItem.style.width = "100%";
-      sliderScroller.style.left = "100%";
+      sliderScroller.style.left = "0";
 
     }
 

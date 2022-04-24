@@ -26,13 +26,13 @@
           <div class="header-logo">
             <a class="header-logo__link">
 
-              <span class="visually-hidden">Логотип Cat Energy</span>
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/logo.svg">
 
-              <img class="header-logo__small-img" src="img/logo-small.svg" alt="" width="34" height="38">
+                <img class="header-logo__image" src="img/logo-small.svg" alt="Логотип Cat Energy." width="34" height="38">
+              </picture>
 
               <img class="header-logo__name" src="img/logo-name.svg" alt="" width="101" height="18">
-
-              <img class="header-logo__img" src="img/logo.svg" alt="" width="174" height="52">
 
             </a>
           </div>
@@ -147,11 +147,31 @@
           <ul class="comparison-slider__list">
 
             <li class="comparison-slider__item comparison-slider__item--before comparison-slider__item--active" style="width: 50%;">
-              <img src="img/example/cat-fat.png" alt="Борис до того, как он начал есть корм Cat Energy." width="280" height="232">
+
+              <div class="comparison-slider__img-wrap">
+
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/example/cat-fat-tablet.png">
+
+                  <img class="comparison-slider__image" src="img/example/cat-fat.png" alt="Борис до того, как он начал есть корм Cat Energy." width="280" height="232">
+                </picture>
+
+              </div>
+
             </li>
 
             <li class="comparison-slider__item comparison-slider__item--after" style="width: 50%;">
-              <img src="img/example/cat-skinny.png" alt="Борис после того, как он начал есть корм Cat Energy." width="280" height="232">
+
+              <div class="comparison-slider__img-wrap">
+
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/example/cat-skinny-tablet.png">
+
+                  <img src="img/example/cat-skinny.png" alt="Борис после того, как он начал есть корм Cat Energy." width="243" height="232">
+                </picture>
+
+              </div>
+
             </li>
 
           </ul>
@@ -199,7 +219,7 @@
     <div class="container page-footer__container">
 
       <div class="page-footer__logo">
-        <a><span class="visually-hidden">Логотип Cat Energy</span><img src="img/logo-name.svg" alt="" width="129" height="26"></a>
+        <a class="footer-logo"><span class="visually-hidden">Логотип Cat Energy</span><img src="img/footer-logo.svg" alt="" width="128" height="24"></a>
       </div>
 
       <div class="page-footer__social">

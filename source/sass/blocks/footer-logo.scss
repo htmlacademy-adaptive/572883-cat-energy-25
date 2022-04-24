@@ -1,0 +1,11 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.footer-logo {
+  display: block;
+}
+
+.footer-logo img {
+  display: block;
+  width: 128px;
+  height: 24px;
+}
