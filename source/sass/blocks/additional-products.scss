@@ -1,73 +1,20 @@
 @use "./global/variables.scss" as *; /* Переменные */
 
+.additional-products__title {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 77px;
+  }
+}
+
 .additional-products__container {
   padding: 0 $mobile-side-indent;
-
-  @media (min-width: $tablet-width) {
-    padding: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.additional-products__title {
-  margin: 0;
-  margin-bottom: 34px;
-  margin-right: -20px;
-  margin-left: -20px;
-  font-family: $accent-font;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1;
-  color: $black-text;
-
-  @media (min-width: $tablet-width) {
-    font-size: 36px;
-    margin-bottom: 80px;
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 100%;
-  }
-}
-
-.additional-products__title span {
-  display: inline-block;
-  padding: 0 20px;
-  background-color: #ffffff;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 40px;
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-left: -40px;
-  }
-}
-
-.additional-products__title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  transform: translateY(16px);
-  z-index: -1;
-  width: 100%;
-  height: 2px;
-  background-color: $accent;
-
-  @media (min-width: $tablet-width) {
-    transform: translateY(23px);
-  }
 }
 
 .additional-products__list {
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 34px;
   padding: 0;
   border-top: 1px solid #cdcdcd;
   border-bottom: 1px solid #cdcdcd;
