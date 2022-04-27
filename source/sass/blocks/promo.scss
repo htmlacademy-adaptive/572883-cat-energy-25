@@ -29,12 +29,12 @@
     @media (max-width: $only-mobile-width) {
       background-image:
         linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-        url("../img/promo/promo-bg-767.jpg");
+        url("../img/promo/promo-bg-mobile.jpg");
 
       @media (min-resolution: 2dppx) {
         background-image:
           linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-          url("../img/promo/promo-bg-767-x2.jpg");
+          url("../img/promo/promo-bg-mobile-2x.jpg");
       }
     }
 
@@ -48,8 +48,14 @@
       height: 100%;
       background-image:
         linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-        url("../img/promo/promo-bg-full.jpg");
+        url("../img/promo/promo-bg-desktop.jpg");
       background-position: left center;
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          url("../img/promo/promo-bg-desktop-2x.jpg");
+      }
     }
   }
 }
@@ -59,12 +65,12 @@
   background-repeat: no-repeat;
 
   @media (max-width: $only-mobile-width) {
-    background-image: url("../img/promo/promo-images-280.png");
+    background-image: url("../img/promo/promo-images-mobile.png");
     background-position: center bottom 43px;
     background-size: 280px 270px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo/promo-images-280-x2.png");
+      background-image: url("../img/promo/promo-images-mobile-2x.png");
     }
   }
 
@@ -73,12 +79,12 @@
     padding-right: 90px;
     padding-bottom: 526px;
     padding-left: 90px;
-    background-image: url("../img/promo/promo-images-708.png");
+    background-image: url("../img/promo/promo-images-tablet.png");
     background-position: center bottom;
     background-size: contain;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo/promo-images-708-x2.png");
+      background-image: url("../img/promo/promo-images-tablet-2x.png");
     }
   }
 
@@ -87,12 +93,12 @@
     padding-right: 80px;
     padding-bottom: 185px;
     padding-left: 80px;
-    background-image: url("../img/promo/promo-images-552.png");
+    background-image: url("../img/promo/promo-images-desktop.png");
     background-position: top 141px left 448px;
     background-size: 552px 499px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo/promo-images-552-x2.png");
+      background-image: url("../img/promo/promo-images-desktop-2x.png");
     }
   }
 }
