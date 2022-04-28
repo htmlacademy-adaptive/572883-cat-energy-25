@@ -19,7 +19,7 @@
 .page-header__logo-wrap {
   @media (max-width: $only-mobile-width) {
     position: relative;
-    padding: 12px $mobile-side-indent 15px;
+    padding: 10px $mobile-side-indent 12px;
     border-bottom: 1px solid $basic-grey;
   }
 }

@@ -7,6 +7,11 @@
 
   <title>Подбор программы | Cat Energy – Функциональное питание для котов</title>
 
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -21,13 +26,13 @@
           <div class="header-logo">
             <a class="header-logo__link" href="index.html">
 
-              <span class="visually-hidden">Логотип Cat Energy</span>
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/logo.svg">
 
-              <img class="header-logo__small-img" src="img/logo-small.svg" alt="" width="34" height="38">
+                <img class="header-logo__image" src="img/logo-small.svg" alt="Логотип Cat Energy." width="34" height="38">
+              </picture>
 
               <img class="header-logo__name" src="img/logo-name.svg" alt="" width="101" height="18">
-
-              <img class="header-logo__img" src="img/logo.svg" alt="" width="174" height="52">
 
             </a>
           </div>
@@ -67,15 +72,15 @@
     </header>
 
     <section class="application__content">
-      <div class="container container--narrow">
+      <form class="application-form" action="https://echo.htmlacademy.ru/" method="get">
 
         <h2 class="visually-hidden">Форма заказа</h2>
 
-        <form class="application-form" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="application-form__group">
 
-          <fieldset class="application-form__group">
+          <h3 class="visually-hidden">Данные вашего питомца</h3>
 
-            <legend class="visually-hidden">Данные вашего питомца</legend>
+          <div class="container application-form__container">
 
             <div class="application-form__cat-data">
 
@@ -118,12 +123,19 @@
 
             </div>
 
-          </fieldset>
+          </div>
 
-          <fieldset class="application-form__group">
+        </fieldset>
 
-            <legend class="application-form__title"><span>Контактные данные<br> (владельца кота)</span></legend>
+        <fieldset class="application-form__group">
 
+          <header class="secondary-title application-form__title">
+            <div class="container">
+              <h3 class="secondary-title__title">Контактные данные<br> (владельца кота)</h3>
+            </div>
+          </header>
+
+          <div class="container application-form__container">
             <div class="application-form__contacts">
 
               <label class="form-field form-field--email">
@@ -137,23 +149,35 @@
               </label>
 
             </div>
+          </div>
 
-          </fieldset>
+        </fieldset>
 
-          <fieldset class="application-form__group">
+        <fieldset class="application-form__group">
 
-            <legend class="application-form__title"><span>Комментарий</span></legend>
+          <header class="secondary-title application-form__title">
+            <div class="container">
+              <h3 class="secondary-title__title">Комментарий</h3>
+            </div>
+          </header>
 
+          <div class="container application-form__container">
             <div class="application-form__comment">
               <textarea class="form-textarea" name="application-form__comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
+          </div>
 
-          </fieldset>
+        </fieldset>
 
-          <fieldset class="application-form__group">
+        <fieldset class="application-form__group">
 
-            <legend class="application-form__title"><span>Дополнительно</span></legend>
+          <header class="secondary-title application-form__title">
+            <div class="container">
+              <h3 class="secondary-title__title">Дополнительно</h3>
+            </div>
+          </header>
 
+          <div class="container container--narrow">
             <div class="application-form__additional-products">
 
               <label class="form-checkbox">
@@ -181,18 +205,19 @@
               </label>
 
             </div>
+          </div>
 
-          </fieldset>
+        </fieldset>
 
+        <div class="container application-form__container">
           <div class="application-form__submit-wrapper">
-            <button class="application-form__submit button button--accent" type="submit">Отправить заявку</button>
+            <button class="application-form__submit button button--form button--accent" type="submit">Отправить заявку</button>
 
             <p class="application-form__footnote">* — Обязательные поля</p>
           </div>
+        </div>
 
-        </form>
-
-      </div>
+      </form>
     </section>
 
     <section class="contacts contacts--light-bg">
@@ -212,7 +237,13 @@
       </div>
 
       <div class="contacts__map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acf4647883fcb539aa11707fc67d8d56fd44be4d65e3d60a541c707047ff53332&amp;width=100%25&amp;height=100%&amp;lang=ru_RU"></script>
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+        width="320"
+        height="362"
+        allowfullscreen
+        title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"
+      ></iframe>
       </div>
     </section>
 
@@ -222,7 +253,7 @@
     <div class="container page-footer__container">
 
       <div class="page-footer__logo">
-        <a><span class="visually-hidden">Логотип Cat Energy</span><img src="img/logo-name.svg" alt="" width="129" height="26"></a>
+        <a class="footer-logo"><img src="img/footer-logo.svg" alt="Логотип Cat Energy" width="128" height="24"></a>
       </div>
 
       <div class="page-footer__social">

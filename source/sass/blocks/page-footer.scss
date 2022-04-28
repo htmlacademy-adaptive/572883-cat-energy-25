@@ -1,11 +1,11 @@
 @use "./global/variables.scss" as *; /* Переменные */
 
 .page-footer {
-  padding: 37px $mobile-side-indent 22px;
+  padding: 39px $mobile-side-indent 25px;
   background: $basic-grey;
 
   @media (min-width: $tablet-width) {
-    padding: 56px 0;
+    padding: 58px 0;
   }
 }
 
@@ -30,10 +30,6 @@
   }
 }
 
-.page-footer__logo img {
-  display: block;
-}
-
 .page-footer__social {
   display: flex;
   justify-content: center;
@@ -49,7 +45,7 @@
 .page-footer__copyright {
   font-size: 16px;
   line-height: 18px;
-  margin-top: 22px;
+  margin-top: 21px;
 
   @media (max-width: $only-mobile-width) {
     width: 280px;

@@ -31,6 +31,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  counter-reset: about-product__counter;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -50,6 +51,7 @@
   align-items: center;
   font-size: 14px;
   line-height: 18px;
+  counter-increment: about-product__counter;
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -102,51 +104,20 @@
 
 .about-product__item::after {
   display: none;
+  content: counter(about-product__counter);
 
   @media (min-width: $tablet-width) {
     position: absolute;
     top: -40px;
+    right: 76px;
     z-index: -1;
     display: block;
+    width: 134px;
+    height: 280px;
+    text-align: center;
     font-family: $accent-font;
     font-size: 280px;
     line-height: 280px;
     color: #f2f2f2;
-  }
-}
-
-.about-product__item--item-1::after {
-  content: "1";
-  right: 100px;
-
-  @media (min-width: $desktop-width) {
-    right: 21px;
-  }
-}
-
-.about-product__item--item-2::after {
-  content: "2";
-  right: 79px;
-
-  @media (min-width: $desktop-width) {
-    right: 0;
-  }
-}
-
-.about-product__item--item-3::after {
-  content: "3";
-  right: 77px;
-
-  @media (min-width: $desktop-width) {
-    right: -2px;
-  }
-}
-
-.about-product__item--item-4::after {
-  content: "4";
-  right: 76px;
-
-  @media (min-width: $desktop-width) {
-    right: -4px;
   }
 }
