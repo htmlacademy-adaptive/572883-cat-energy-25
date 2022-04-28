@@ -31,20 +31,13 @@
 }
 
 @media (max-width: $only-mobile-width) {
-  /* stylelint-disable  declaration-no-important */
-
-  /* Important необходим, чтобы перебить инлайновые стили в html.
-  Они нужны, чтобы упралять шириной элемента с помощью JS, но только на больших экранах. */
-
   .comparison-slider__item {
-    width: 0 !important;
+    width: 0;
   }
 
   .comparison-slider__item--active {
-    width: 100% !important;
+    width: 100%;
   }
-
-  /* stylelint-enable  declaration-no-important */
 }
 
 .comparison-slider__item--after {
