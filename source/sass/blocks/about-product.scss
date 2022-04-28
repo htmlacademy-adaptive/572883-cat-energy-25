@@ -120,4 +120,8 @@
     line-height: 280px;
     color: #f2f2f2;
   }
+
+  @media (min-width: $desktop-width) {
+    right: 0;
+  }
 }
