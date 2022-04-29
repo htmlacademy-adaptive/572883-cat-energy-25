@@ -48,9 +48,11 @@
   transform: translateX(-50%);
   width: 101px;
   height: 18px;
-  background-image: url("../img/logo-name.svg");
+  background-image: url("../img/logo-small.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 150px 38px;
+  background-position: right top -13px;
+
 
   @media (min-width: $tablet-width) {
     display: none;
