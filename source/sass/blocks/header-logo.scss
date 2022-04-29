@@ -26,6 +26,8 @@
   display: block;
   width: 34px;
   height: 38px;
+  object-fit: cover;
+  object-position: left;
 
   @media (min-width: $tablet-width) {
     width: 174px;
@@ -38,13 +40,17 @@
   }
 }
 
-.header-logo__name {
+.header-logo__link::after {
+  content: "";
   position: absolute;
   top: 13px;
   left: 50%;
   transform: translateX(-50%);
   width: 101px;
   height: 18px;
+  background-image: url("../img/logo-name.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 
   @media (min-width: $tablet-width) {
     display: none;
