@@ -22,10 +22,20 @@
   position: absolute;
   top: 1px;
   right: 0;
+  color: #666666;
+  transition: color 0.2s ease-out;
 
   @media (min-width: $tablet-width) {
     position: static;
     margin-left: 22px;
     margin-top: 2px;
   }
+}
+
+.copyright__link:hover .copyright__logo {
+  color: $accent;
+}
+
+.copyright__link:active {
+  opacity: 0.3;
 }
