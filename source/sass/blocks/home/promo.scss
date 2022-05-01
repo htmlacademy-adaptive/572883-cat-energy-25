@@ -44,8 +44,10 @@
 
     @media (min-width: $desktop-width) {
       content: "";
+      top: -171px;
       left: 50%;
-      height: 100%;
+      bottom: 0;
+      height: auto;
       background-image:
         linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
         url("../img/promo/promo-bg-desktop.jpg");
@@ -75,7 +77,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 140px;
+    padding-top: 59px;
     padding-right: 90px;
     padding-bottom: 526px;
     padding-left: 90px;
@@ -89,12 +91,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 223px;
+    padding-top: 105px;
     padding-right: 80px;
     padding-bottom: 185px;
     padding-left: 80px;
     background-image: url("../img/promo/promo-images-desktop.png");
-    background-position: top 141px left 448px;
+    background-position: top 23px left 448px;
     background-size: 552px 499px;
 
     @media (min-resolution: 2dppx) {

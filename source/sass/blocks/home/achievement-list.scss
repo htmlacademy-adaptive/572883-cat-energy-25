@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
+  margin-right: -32px;
 
   @media (min-width: $tablet-width) {
     justify-content: start;
@@ -15,13 +16,10 @@
   position: relative;
   padding: 14px 15px 16px;
   margin-right: 32px;
+  margin-bottom: 32px;
   width: 124px;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
-
-  &:last-child {
-    margin-right: 0;
-  }
 
   @media (min-width: $tablet-width) {
     width: 162px;
@@ -43,11 +41,13 @@
   background-color: $basic-grey;
 
   @media (min-width: $tablet-width) {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
     bottom: -7px;
     padding: 0 8px;
     font-size: 14px;
     line-height: 14px;
-    white-space: nowrap;
     background-color: #ffffff;
   }
 

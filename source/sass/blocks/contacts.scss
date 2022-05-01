@@ -2,7 +2,6 @@
 
 .contacts {
   position: relative;
-  z-index: 1;
   background-color: #ffffff;
 
   &--light-bg {
@@ -18,7 +17,8 @@
 
 .contacts__container {
   @media (min-width: $desktop-width) {
-    height: 0;
+    height: auto;
+    z-index: -1;
   }
 }
 
@@ -32,6 +32,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    position: relative;
+    z-index: 2;
     padding: 56px 80px 59px;
     width: 565px;
     background-color: #ffffff;
@@ -88,7 +90,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     top: 0;
     right: 0;
     left: 0;

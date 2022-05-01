@@ -1,14 +1,5 @@
 @use "./global/variables.scss" as *; /* Переменные */
 
-.home__page-header {
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-}
-
 .home__promo {
   margin-bottom: 20px;
 

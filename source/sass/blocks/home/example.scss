@@ -71,9 +71,7 @@
 .example__achievement-wrap {
   @media (min-width: $tablet-width) {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 85px;
+    margin-bottom: 53px;
   }
 
   @media (min-width: $desktop-width) {
@@ -84,19 +82,18 @@
 
 .example__achievement-list {
   flex-grow: 1;
-  margin-bottom: 34px;
+  margin-bottom: 2px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 56px;
+    margin-bottom: 25px;
   }
 }
 
 .example__expenses {
-  flex-grow: 1;
   margin-top: 0;
   margin-bottom: 40px;
   padding: 0 32px;
@@ -108,6 +105,7 @@
   color: $black-text;
 
   @media (min-width: $tablet-width) {
+    margin-top: 7px;
     margin-bottom: 0;
     padding: 0;
     max-width: 180px;
