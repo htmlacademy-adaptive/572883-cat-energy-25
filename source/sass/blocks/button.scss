@@ -3,7 +3,7 @@
 .button {
   display: inline-block;
   padding: 13px 26px;
-  font-family: "Oswald", sans-serif;
+  font-family: $accent-font;
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
@@ -23,6 +23,20 @@
     color: rgba($text-color, 0.3);
   }
 
+  &:focus {
+    outline: 2px solid $text-color;
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $text-color;
+    outline-offset: 2px;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 17px 26px;
     font-size: 20px;
@@ -39,6 +53,20 @@
 
   &:active {
     color: rgba(#ffffff, 0.3);
+  }
+
+  &:focus {
+    outline: 2px solid $accent;
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 2px;
   }
 }
 

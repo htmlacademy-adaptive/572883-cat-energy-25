@@ -8,10 +8,8 @@
   height: 100%;
 
   @media (min-width: $tablet-width) {
-    padding: 8px 38px 39px;
-    background-image: linear-gradient($basic-grey, $basic-grey);
-    background-repeat: no-repeat;
-    background-position: top 81px left;
+    padding: 0 38px 39px;
+    background-color: $basic-grey;
   }
 
   @media (min-width: $desktop-width) {
@@ -21,22 +19,19 @@
 
 .basic-preview__images {
   display: flex;
+  flex: 0 0 140px;
   align-items: center;
   justify-content: center;
-  width: 140px;
-  height: 112px;
-  flex-shrink: 0;
 
   @media (min-width: $tablet-width) {
-    align-items: end;
-    width: 168px;
-    height: 207px;
-    margin-bottom: 28px;
-    padding-bottom: 7px;
+    flex: 0 0 100%;
+    margin-top: -73px;
+    margin-bottom: 35px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 14px;
+    margin-bottom: 44px;
+    margin-top: -80px;
   }
 }
 
@@ -46,39 +41,24 @@
 
 .basic-preview__images img {
   display: block;
-  width: 68px;
-  height: auto;
-
-  @media (min-width: $tablet-width) {
-    width: 161px;
-  }
-}
-
-.basic-preview__images--big {
-  align-items: end;
-  padding-bottom: 0;
-
-  @media (min-width: $desktop-width) {
-    padding-bottom: 12px;
-  }
-}
-
-.basic-preview__images--big img {
-  width: 84px;
+  width: 100px;
+  height: 112px;
+  object-fit: contain;
 
   @media (min-width: $tablet-width) {
     width: 168px;
+    height: 200px;
   }
 }
 
 .basic-preview__content {
-  width: 140px;
+  flex: 0 0 140px;
 
   @media (min-width: $tablet-width) {
     display: flex;
+    flex: 0 0 100%;
     flex-direction: column;
     align-items: center;
-    width: 100%;
   }
 }
 
@@ -107,7 +87,7 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 21px;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
 }
 
@@ -136,6 +116,11 @@
     padding-bottom: 7px;
     border-bottom: 1px solid #cdcdcd;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 7px;
+    padding-bottom: 8px;
+  }
 }
 
 .basic-preview__button {
@@ -144,5 +129,9 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 32px;
   }
 }

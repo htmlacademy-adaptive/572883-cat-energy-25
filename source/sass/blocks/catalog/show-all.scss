@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 78px $mobile-side-indent 25px;
+  padding: 78px $mobile-side-indent 24px;
   text-align: center;
   text-decoration: none;
   color: inherit;
@@ -14,13 +14,17 @@
   background-position: center top 24px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 83px;
+    height: 100%;
     padding: 160px 36px 36px;
-    height: calc(100% - 83px);
     border: 2px solid #f2f2f2;
     background-image: url("../img/icons/plus-big.svg");
     background-size: 60px 60px;
     background-position: center top 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 39px;
+    background-position: center top 47px;
   }
 }
 
@@ -44,7 +48,7 @@
 
 .show-all__intro {
   margin: 0;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   font-size: 12px;
 
   @media (min-width: $tablet-width) {

@@ -35,13 +35,16 @@
 @use "./blocks/main-header.scss";
 @use "./blocks/secondary-title.scss";
 @use "./blocks/application-form.scss";
-@use "./blocks/basic-preview.scss";
-@use "./blocks/show-all.scss";
-@use "./blocks/basic-products.scss";
-@use "./blocks/additional-preview.scss";
-@use "./blocks/additional-products.scss";
 
 /* Страницы */
 @use "./blocks/home.scss";
 @use "./blocks/application.scss";
-@use "./blocks/catalog.scss";
+
+/* Страница Каталог */
+@use "./blocks/catalog/basic-preview.scss";
+@use "./blocks/catalog/show-all.scss";
+@use "./blocks/catalog/basic-products.scss";
+@use "./blocks/catalog/additional-preview.scss";
+@use "./blocks/catalog/catalog-gift.scss";
+@use "./blocks/catalog/additional-products.scss";
+@use "./blocks/catalog/catalog.scss";
