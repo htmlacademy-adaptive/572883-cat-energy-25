@@ -33,12 +33,9 @@
 @use "./blocks/example.scss";
 @use "./blocks/contacts.scss";
 @use "./blocks/main-header.scss";
-@use "./blocks/secondary-title.scss";
-@use "./blocks/application-form.scss";
 
 /* Страницы */
 @use "./blocks/home.scss";
-@use "./blocks/application.scss";
 
 /* Страница Каталог */
 @use "./blocks/catalog/basic-preview.scss";
@@ -48,3 +45,7 @@
 @use "./blocks/catalog/catalog-gift.scss";
 @use "./blocks/catalog/additional-products.scss";
 @use "./blocks/catalog/catalog.scss";
+
+/* Страница Подбор программы */
+@use "./blocks/application/application-form.scss";
+@use "./blocks/application/application.scss";

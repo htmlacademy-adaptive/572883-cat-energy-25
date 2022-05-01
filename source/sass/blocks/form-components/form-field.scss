@@ -1,6 +1,7 @@
 @use "./global/variables.scss" as *; /* Переменные */
 
 .form-field {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -38,11 +39,7 @@
     outline: 1px solid $text-color;
   }
 
-  &:invalid:not(:placeholder-shown) {
-    border: 1px solid $error-color;
-    outline: 1px solid $error-color;
-  }
-
+  &:invalid:not(:placeholder-shown),
   &--error {
     border: 1px solid $error-color;
     outline: 1px solid $error-color;
@@ -60,18 +57,28 @@
   text-transform: uppercase;
 }
 
-.form-field--email .form-field__input {
-  padding-right: 45px;
-  background-image: url("../img/icons/email.svg");
-  background-repeat: no-repeat;
-  background-size: 20px 15px;
-  background-position: right 15px center;
+.form-field--has-icon .form-field__input {
+  padding-right: 52px;
 }
 
-.form-field--tel .form-field__input {
-  padding-right: 45px;
-  background-image: url("../img/icons/phone.svg");
-  background-repeat: no-repeat;
-  background-size: 20px 21px;
-  background-position: right 12px center;
+.form-field__icon {
+  position: absolute;
+  width: 56px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222222;
+  transition: color 0.2s ease-out;
+}
+
+.form-field__input:focus ~ .form-field__icon {
+  color: $accent;
+}
+
+.form-field__input:invalid:not(:placeholder-shown) ~ .form-field__icon,
+.form-field__input--error ~ .form-field__icon {
+  color: $error-color;
 }

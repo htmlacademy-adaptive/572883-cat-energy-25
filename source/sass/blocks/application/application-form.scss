@@ -1,9 +1,13 @@
 @use "./global/variables.scss" as *; /* Переменные */
 
 .application-form__group {
-  padding: 0;
+  padding: 0 $mobile-side-indent;
   margin: 0;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 
   @media (min-width: $desktop-width) {
     display: flex;
@@ -13,11 +17,52 @@
 }
 
 .application-form__title {
-  width: 100%;
+  position: relative;
+  padding: 0;
   margin-bottom: 35px;
+  font-family: $accent-font;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: $black-text;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 73px;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 76px;
+  }
+}
+
+.application-form__title::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 16px;
+  left: calc(50% - 50vw);
+  width: 100vw;
+  height: 2px;
+  background-color: $accent;
+
+  @media (min-width: $tablet-width) {
+    top: 22px;
+  }
+}
+
+.application-form__title span {
+  display: inline-block;
+  padding: 0 22px;
+  margin-left: -22px;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 37px;
+    margin-left: -37px;
+  }
+}
+
+.application-form__title br {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
@@ -33,47 +78,50 @@
   }
 }
 
+.application-form__row {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
 .application-form__cat-data {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
   margin-bottom: 24px;
-  padding: 0 $mobile-side-indent;
 
   @media (min-width: $tablet-width) {
     gap: 20px;
     margin-bottom: 72px;
-    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
-    width: 570px;
+    flex: 0 0 570px;
     margin-right: auto;
     margin-bottom: 69px;
   }
 }
 
 .application-form__program {
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   gap: 13px;
-  margin-bottom: 28px;
-  padding: 22px $mobile-side-indent 18px;
-  border-top: 1px solid $grey-line;
-  border-bottom: 1px solid $grey-line;
+  margin-bottom: 26px;
+  margin-left: -21px;
+  margin-right: -21px;
+  padding: 22px 20px 18px;
+  border: 1px solid $grey-line;
 
   @media (min-width: $tablet-width) {
     margin-right: 0;
     margin-bottom: 75px;
     margin-left: 0;
     padding: 25px 28px 23px;
-    border: 1px solid $grey-line;
   }
 
   @media (min-width: $desktop-width) {
-    width: 570px;
+    flex: 0 0 570px;
     margin-bottom: 69px;
   }
 }
@@ -83,13 +131,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
-  padding: 0 $mobile-side-indent;
   margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     gap: 20px;
     margin-bottom: 65px;
-    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -102,16 +148,15 @@
 
 .application-form__comment {
   width: 100%;
-  padding: 0 $mobile-side-indent;
   margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
-    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
+    margin-bottom: 67px;
   }
 }
 
@@ -120,14 +165,12 @@
   grid-template-columns: 1fr;
   gap: 12px;
   margin-bottom: 31px;
-  padding: 0 $mobile-side-indent;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
     gap: 32px 60px;
     margin-top: -19px;
     margin-bottom: 53px;
-    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -141,13 +184,11 @@
 
 .application-form__submit-wrapper {
   margin-bottom: 33px;
-  padding: 0 $mobile-side-indent;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     display: flex;
     margin-bottom: 72px;
-    padding: 0;
   }
 
   @media (min-width: $desktop-width) {

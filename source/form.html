@@ -78,7 +78,7 @@
 
           <h3 class="visually-hidden">Данные вашего питомца</h3>
 
-          <div class="container application-form__container">
+          <div class="container container--narrow application-form__row">
 
             <div class="application-form__cat-data">
 
@@ -126,24 +126,32 @@
         </fieldset>
 
         <fieldset class="application-form__group">
+          <div class="container container--narrow">
 
-          <header class="secondary-title application-form__title">
-            <div class="container">
-              <h3 class="secondary-title__title">Контактные данные<br> (владельца кота)</h3>
-            </div>
-          </header>
+            <legend class="application-form__title"><span>Контактные данные<br> (владельца кота)</span></legend>
 
-          <div class="container application-form__container">
             <div class="application-form__contacts">
 
-              <label class="form-field form-field--email">
+              <label class="form-field form-field--has-icon">
                 E-mail:*
-                <input class="form-field__input " type="email" name="application-form__email" placeholder="kuklachev@gmail.com" required>
+                <input class="form-field__input" type="email" name="application-form__email" placeholder="kuklachev@gmail.com" required>
+
+                <div class="form-field__icon" aria-hidden="true">
+                  <svg width="20" height="15">
+                    <use xlink:href="img/icons/sprite.svg#icon-email"></use>
+                  </svg>
+                </div>
               </label>
 
-              <label class="form-field form-field--tel">
+              <label class="form-field form-field--has-icon">
                 Телефон:*
                 <input class="form-field__input" type="tel" name="application-form__tel" placeholder="8 (960) 900-60-90" required>
+
+                <div class="form-field__icon" aria-hidden="true">
+                  <svg width="20" height="21">
+                    <use xlink:href="img/icons/sprite.svg#icon-phone"></use>
+                  </svg>
+                </div>
               </label>
 
             </div>
@@ -153,13 +161,9 @@
 
         <fieldset class="application-form__group">
 
-          <header class="secondary-title application-form__title">
-            <div class="container">
-              <h3 class="secondary-title__title">Комментарий</h3>
-            </div>
-          </header>
+          <div class="container container--narrow">
+            <legend class="application-form__title"><span>Комментарий</span></legend>
 
-          <div class="container application-form__container">
             <div class="application-form__comment">
               <textarea class="form-textarea" name="application-form__comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
@@ -168,14 +172,10 @@
         </fieldset>
 
         <fieldset class="application-form__group">
-
-          <header class="secondary-title application-form__title">
-            <div class="container">
-              <h3 class="secondary-title__title">Дополнительно</h3>
-            </div>
-          </header>
-
           <div class="container container--narrow">
+
+            <legend class="application-form__title"><span>Дополнительно</span></legend>
+
             <div class="application-form__additional-products">
 
               <label class="form-checkbox">
@@ -203,11 +203,11 @@
               </label>
 
             </div>
-          </div>
 
+          </div>
         </fieldset>
 
-        <div class="container application-form__container">
+        <div class="container container--narrow">
           <div class="application-form__submit-wrapper">
             <button class="application-form__submit button button--form button--accent" type="submit">Отправить заявку</button>
 
@@ -271,7 +271,7 @@
             <a class="social__link" href="#">
               <span class="visually-hidden">Наш канал на Youtube</span>
 
-              <svg width="28" height="22">
+              <svg width="28" height="22" aria-hidden="true">
                 <use xlink:href="img/icons/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
@@ -281,7 +281,7 @@
             <a class="social__link" href="#">
               <span class="visually-hidden">Наш Telegram</span>
 
-              <svg width="28" height="22">
+              <svg width="28" height="22" aria-hidden="true">
                 <use xlink:href="img/icons/sprite.svg#icon-telegram"></use>
               </svg>
             </a>
@@ -294,7 +294,7 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
 
-          <svg class="copyright__logo" width="27" height="34">
+          <svg class="copyright__logo" width="27" height="34" aria-hidden="true">
             <use xlink:href="img/icons/sprite.svg#html-academy"></use>
           </svg>
         </a>

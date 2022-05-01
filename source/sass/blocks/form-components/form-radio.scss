@@ -59,12 +59,11 @@
   border-color: #bababa;
 }
 
-.form-radio:focus-within .form-radio__pseudoinput {
+.form-radio__input:focus-visible ~ .form-radio__pseudoinput {
   border-color: $text-color;
   outline: 1px solid $text-color;
 }
 
-.form-radio:disabled,
 .form-radio--disabled {
   opacity: 0.3;
 }

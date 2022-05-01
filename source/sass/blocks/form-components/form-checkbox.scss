@@ -51,12 +51,11 @@
   border-color: #bababa;
 }
 
-.form-checkbox:focus-within .form-checkbox__pseudoinput {
+.form-checkbox__input:focus-visible ~ .form-checkbox__pseudoinput {
   border-color: $text-color;
   outline: 1px solid $text-color;
 }
 
-.form-checkbox:disabled,
 .form-checkbox--disabled {
   opacity: 0.3;
 }
