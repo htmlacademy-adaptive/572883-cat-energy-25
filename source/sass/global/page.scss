@@ -16,6 +16,7 @@
   color: $text-color;
   background-color: #ffffff;
   min-width: 320px;
+  overflow-x: hidden;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
