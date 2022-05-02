@@ -20,6 +20,7 @@
   position: relative;
   padding: 0;
   margin-bottom: 35px;
+  width: 100%;
   font-family: $accent-font;
   font-weight: 400;
   font-size: 24px;
@@ -156,7 +157,7 @@
 
   @media (min-width: $desktop-width) {
     width: 100%;
-    margin-bottom: 67px;
+    margin-bottom: 64px;
   }
 }
 
@@ -164,7 +165,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
-  margin-bottom: 31px;
+  margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -184,11 +185,13 @@
 
 .application-form__submit-wrapper {
   margin-bottom: 33px;
+  padding: 0 $mobile-side-indent;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     display: flex;
     margin-bottom: 72px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
