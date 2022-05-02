@@ -1,0 +1,25 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.application__page-header {
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.application__main-header {
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 66px;
+  }
+}

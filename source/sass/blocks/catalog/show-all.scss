@@ -1,0 +1,65 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.show-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 78px $mobile-side-indent 24px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  background-image: url("../img/icons/plus.svg");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center top 24px;
+
+  @media (min-width: $tablet-width) {
+    height: 100%;
+    padding: 160px 36px 36px;
+    border: 2px solid #f2f2f2;
+    background-image: url("../img/icons/plus-big.svg");
+    background-size: 60px 60px;
+    background-position: center top 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 39px;
+    background-position: center top 47px;
+  }
+}
+
+.show-all__title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-family: $accent-font;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $dark-text;
+
+  @media (min-width: $tablet-width) {
+    max-width: 167px;
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.show-all__intro {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 12px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 167px;
+    margin-bottom: auto;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.show-all__button {
+  margin: 0;
+  width: 100%;
+}

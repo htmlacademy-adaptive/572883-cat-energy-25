@@ -1,0 +1,146 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.promo {
+  position: relative;
+  z-index: 1;
+  padding: 0 $mobile-side-indent;
+  color: #ffffff;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    color: $black-text;
+    text-align: left;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 302px;
+    z-index: -1;
+    background-color: $accent;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center;
+
+    @media (max-width: $only-mobile-width) {
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/promo/promo-bg-mobile.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          url("../img/promo/promo-bg-mobile-2x.jpg");
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      content: "";
+      top: -171px;
+      left: 50%;
+      bottom: 0;
+      height: auto;
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/promo/promo-bg-desktop.jpg");
+      background-position: left center;
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          url("../img/promo/promo-bg-desktop-2x.jpg");
+      }
+    }
+  }
+}
+
+.promo__container {
+  padding-top: 25px;
+  background-repeat: no-repeat;
+
+  @media (max-width: $only-mobile-width) {
+    background-image: url("../img/promo/promo-images-mobile.png");
+    background-position: center bottom 43px;
+    background-size: 280px 270px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo/promo-images-mobile-2x.png");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 59px;
+    padding-right: 90px;
+    padding-bottom: 526px;
+    padding-left: 90px;
+    background-image: url("../img/promo/promo-images-tablet.png");
+    background-position: center bottom;
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo/promo-images-tablet-2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 105px;
+    padding-right: 80px;
+    padding-bottom: 185px;
+    padding-left: 80px;
+    background-image: url("../img/promo/promo-images-desktop.png");
+    background-position: top 23px left 448px;
+    background-size: 552px 499px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo/promo-images-desktop-2x.png");
+    }
+  }
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 26px;
+  font-family: $accent-font;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    margin-bottom: 41px;
+  }
+}
+
+.promo__slogan {
+  margin: 0;
+  margin-bottom: 303px;
+  font-family: $accent-font;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 51px;
+  }
+}
+
+.promo__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+}

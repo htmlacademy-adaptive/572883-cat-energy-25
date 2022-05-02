@@ -16,29 +16,21 @@
 </head>
 
 <body class="page__body application">
-
   <header class="page-header page-header--nojs application__page-header">
     <div class="container page-header__container">
       <nav class="page-header__navigation">
-
         <div class="page-header__logo-wrap">
-
           <div class="header-logo">
             <a class="header-logo__link" href="index.html">
-
               <picture>
                 <source media="(min-width: 768px)" srcset="img/logo.svg">
 
-                <img class="header-logo__image" src="img/logo-small.svg" alt="Логотип Cat Energy." width="34" height="38">
+                <img src="img/logo-small.svg" alt="Логотип Cat Energy." width="150" height="38">
               </picture>
-
-              <img class="header-logo__name" src="img/logo-name.svg" alt="" width="101" height="18">
-
             </a>
           </div>
 
           <button class="menu-toggler page-header__menu-toggler" type="button"><span class="visually-hidden">Открыть меню</span></button>
-
         </div>
 
         <div class="page-header__site-menu">
@@ -46,21 +38,21 @@
             <li class="site-menu__item">
               <a href="index.html">Главная</a>
             </li>
+
             <li class="site-menu__item">
               <a href="catalog.html">Каталог продукции</a>
             </li>
+
             <li class="site-menu__item site-menu__item--current">
               <a>Подбор программы</a>
             </li>
           </ul>
         </div>
-
       </nav>
     </div>
   </header>
 
   <main class="page__main page-main">
-
     <header class="main-header application__main-header">
       <div class="container container--narrow main-header__container">
 
@@ -72,18 +64,14 @@
     </header>
 
     <section class="application__content">
-      <form class="application-form" action="https://echo.htmlacademy.ru/" method="get">
+      <div class="container container--narrow">
+        <form class="application-form" action="https://echo.htmlacademy.ru/" method="get">
+          <h2 class="visually-hidden">Форма заказа</h2>
 
-        <h2 class="visually-hidden">Форма заказа</h2>
-
-        <fieldset class="application-form__group">
-
-          <h3 class="visually-hidden">Данные вашего питомца</h3>
-
-          <div class="container application-form__container">
+          <fieldset class="application-form__group">
+            <legend class="visually-hidden">Данные вашего питомца</legend>
 
             <div class="application-form__cat-data">
-
               <label class="form-field">
                 Имя:*
                 <input class="form-field__input" type="text" name="application-form__cat-name" placeholder="Барсик" required>
@@ -98,11 +86,9 @@
                 Возраст (лет):
                 <input class="form-field__input" type="text" name="application-form__cat-age" placeholder="7">
               </label>
-
             </div>
 
             <div class="application-form__program">
-
               <label class="form-radio">
                 <input class="form-radio__input visually-hidden" type="radio" name="application-form__program" value="weight-loss" checked>
                 <span class="form-radio__pseudoinput"></span>
@@ -120,66 +106,49 @@
                 <span class="form-radio__pseudoinput"></span>
                 Не знаю (Нужен ваш совет)
               </label>
-
             </div>
+          </fieldset>
 
-          </div>
+          <fieldset class="application-form__group">
+            <legend class="application-form__title"><span>Контактные данные<br> (владельца кота)</span></legend>
 
-        </fieldset>
-
-        <fieldset class="application-form__group">
-
-          <header class="secondary-title application-form__title">
-            <div class="container">
-              <h3 class="secondary-title__title">Контактные данные<br> (владельца кота)</h3>
-            </div>
-          </header>
-
-          <div class="container application-form__container">
             <div class="application-form__contacts">
-
-              <label class="form-field form-field--email">
+              <label class="form-field form-field--has-icon">
                 E-mail:*
-                <input class="form-field__input " type="email" name="application-form__email" placeholder="kuklachev@gmail.com" required>
+                <input class="form-field__input" type="email" name="application-form__email" placeholder="kuklachev@gmail.com" required>
+
+                <span class="form-field__icon" aria-hidden="true">
+                  <svg width="20" height="15">
+                    <use xlink:href="img/icons/sprite.svg#icon-email"></use>
+                  </svg>
+                </span>
               </label>
 
-              <label class="form-field form-field--tel">
+              <label class="form-field form-field--has-icon">
                 Телефон:*
                 <input class="form-field__input" type="tel" name="application-form__tel" placeholder="8 (960) 900-60-90" required>
+
+                <span class="form-field__icon" aria-hidden="true">
+                  <svg width="20" height="21">
+                    <use xlink:href="img/icons/sprite.svg#icon-phone"></use>
+                  </svg>
+                </span>
               </label>
-
             </div>
-          </div>
+          </fieldset>
 
-        </fieldset>
+          <fieldset class="application-form__group">
+            <legend class="application-form__title"><span>Комментарий</span></legend>
 
-        <fieldset class="application-form__group">
-
-          <header class="secondary-title application-form__title">
-            <div class="container">
-              <h3 class="secondary-title__title">Комментарий</h3>
-            </div>
-          </header>
-
-          <div class="container application-form__container">
             <div class="application-form__comment">
               <textarea class="form-textarea" name="application-form__comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
-          </div>
+          </fieldset>
 
-        </fieldset>
+          <fieldset class="application-form__group">
+            <legend class="application-form__title"><span>Дополнительно</span></legend>
 
-        <fieldset class="application-form__group">
-
-          <header class="secondary-title application-form__title">
-            <div class="container">
-              <h3 class="secondary-title__title">Дополнительно</h3>
-            </div>
-          </header>
-
-          <div class="container container--narrow">
             <div class="application-form__additional-products">
-
               <label class="form-checkbox">
                 <input class="form-checkbox__input visually-hidden" type="checkbox" name="application-form__sugar-substitute" checked>
                 <span class="form-checkbox__pseudoinput"></span>
@@ -203,27 +172,21 @@
                 <span class="form-checkbox__pseudoinput"></span>
                 Витамины
               </label>
-
             </div>
-          </div>
+          </fieldset>
 
-        </fieldset>
-
-        <div class="container application-form__container">
           <div class="application-form__submit-wrapper">
             <button class="application-form__submit button button--form button--accent" type="submit">Отправить заявку</button>
 
             <p class="application-form__footnote">* — Обязательные поля</p>
           </div>
-        </div>
-
-      </form>
+        </form>
+      </div>
     </section>
 
     <section class="contacts contacts--light-bg">
       <div class="container contacts__container">
         <div class="contacts__content">
-
           <h2 class="visually-hidden">Контакты</h2>
 
           <p class="contacts__offer">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
@@ -232,7 +195,6 @@
             <p>ул. Большая<br>  Конюшенная, д. 19/8</p>
             <p>Санкт-Петербург</p>
           </address>
-
         </div>
       </div>
 
@@ -246,12 +208,10 @@
       ></iframe>
       </div>
     </section>
-
   </main>
 
   <footer class="page-footer">
     <div class="container page-footer__container">
-
       <div class="page-footer__logo">
         <a class="footer-logo"><img src="img/footer-logo.svg" alt="Логотип Cat Energy" width="128" height="24"></a>
       </div>
@@ -259,13 +219,33 @@
       <div class="page-footer__social">
         <ul class="social">
           <li class="social__item">
-            <a class="social__link social__link--vk" href="#"><span class="visually-hidden">Наша страница в ВКонтакте</span></a>
+            <a class="social__link" href="#">
+              <span class="visually-hidden">Наша страница в ВКонтакте</span>
+
+              <svg width="28" height="22">
+                <use xlink:href="img/icons/sprite.svg#icon-vkontakte"></use>
+              </svg>
+            </a>
           </li>
+
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Наш канал на Youtube</span></a>
+            <a class="social__link" href="#">
+              <span class="visually-hidden">Наш канал на Youtube</span>
+
+              <svg width="28" height="22" aria-hidden="true">
+                <use xlink:href="img/icons/sprite.svg#icon-youtube"></use>
+              </svg>
+            </a>
           </li>
+
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="#"><span class="visually-hidden">Наш Telegram</span></a>
+            <a class="social__link" href="#">
+              <span class="visually-hidden">Наш Telegram</span>
+
+              <svg width="28" height="22" aria-hidden="true">
+                <use xlink:href="img/icons/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
@@ -273,14 +253,17 @@
       <div class="copyright page-footer__copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
-          <img class="copyright__logo" src="img/html-academy.svg" alt="" width="27" height="34">
+
+          <div class="copyright__logo">
+            <svg width="27" height="34" aria-hidden="true">
+              <use xlink:href="img/icons/sprite.svg#html-academy"></use>
+            </svg>
+          </div>
         </a>
       </div>
-
     </div>
   </footer>
 
   <script src="js/script.js"></script>
-
 </body>
 </html>

@@ -22,10 +22,12 @@
   }
 }
 
-.header-logo__image {
+.header-logo img {
   display: block;
   width: 34px;
   height: 38px;
+  object-fit: cover;
+  object-position: left;
 
   @media (min-width: $tablet-width) {
     width: 174px;
@@ -38,13 +40,19 @@
   }
 }
 
-.header-logo__name {
+.header-logo__link::after {
+  content: "";
   position: absolute;
   top: 13px;
   left: 50%;
   transform: translateX(-50%);
   width: 101px;
   height: 18px;
+  background-image: url("../img/logo-small.svg");
+  background-repeat: no-repeat;
+  background-size: 150px 38px;
+  background-position: right top -13px;
+
 
   @media (min-width: $tablet-width) {
     display: none;

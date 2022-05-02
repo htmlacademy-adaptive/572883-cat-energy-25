@@ -1,0 +1,28 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  font-family: $base-font;
+  font-size: 14px;
+  line-height: 1.29;
+  color: $text-color;
+  background-color: #ffffff;
+  min-width: 320px;
+  overflow-x: hidden;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+}
+
+.page__main {
+  flex-grow: 1;
+}

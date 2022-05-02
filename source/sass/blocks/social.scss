@@ -17,22 +17,23 @@
 }
 
 .social__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 28px 22px;
+  color: #666666;
+  transition: color 0.2s ease-out;
 
-  &--vk {
-    background-image: url("../img/social/vkontakte.svg");
+  &:hover {
+    color: $accent;
   }
 
-  &--youtube {
-    background-image: url("../img/social/youtube.svg");
+  &:active {
+    opacity: 0.3;
   }
+}
 
-  &--telegram {
-    background-image: url("../img/social/telegram.svg");
-  }
+.social__link svg {
+  display: block;
 }

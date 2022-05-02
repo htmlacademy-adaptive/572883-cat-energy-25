@@ -1,0 +1,49 @@
+@use "./global/variables.scss" as *; /* Переменные */
+
+.catalog__page-header {
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.catalog__main-header {
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 163px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 165px;
+  }
+}
+
+.catalog__basic-products {
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 76px;
+  }
+}
+
+.catalog__additional-products {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 86px;
+  }
+}

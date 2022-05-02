@@ -1,11 +1,12 @@
 /* Глобальные стили */
 @use "./global/fonts.scss";
 @use "./global/global.scss";
+@use "./global/page.scss";
 
 /* Компоненты */
-@use "./blocks/page.scss";
 @use "./blocks/container.scss";
 @use "./blocks/button.scss";
+@use "./blocks/main-header.scss";
 
 /* Компоненты Форм */
 
@@ -23,25 +24,26 @@
 @use "./blocks/copyright.scss";
 @use "./blocks/page-header.scss";
 @use "./blocks/page-footer.scss";
-
-/* Блоки */
-@use "./blocks/promo.scss";
-@use "./blocks/programs.scss";
-@use "./blocks/about-product.scss";
-@use "./blocks/achievement-list.scss";
-@use "./blocks/comparison-slider.scss";
-@use "./blocks/example.scss";
 @use "./blocks/contacts.scss";
-@use "./blocks/main-header.scss";
-@use "./blocks/secondary-title.scss";
-@use "./blocks/application-form.scss";
-@use "./blocks/basic-preview.scss";
-@use "./blocks/show-all.scss";
-@use "./blocks/basic-products.scss";
-@use "./blocks/additional-preview.scss";
-@use "./blocks/additional-products.scss";
 
-/* Страницы */
-@use "./blocks/home.scss";
-@use "./blocks/application.scss";
-@use "./blocks/catalog.scss";
+/* Главная */
+@use "./blocks/home/promo.scss";
+@use "./blocks/home/programs.scss";
+@use "./blocks/home/about-product.scss";
+@use "./blocks/home/achievement-list.scss";
+@use "./blocks/home/comparison-slider.scss";
+@use "./blocks/home/example.scss";
+@use "./blocks/home/home.scss";
+
+/* Страница Каталог */
+@use "./blocks/catalog/basic-preview.scss";
+@use "./blocks/catalog/show-all.scss";
+@use "./blocks/catalog/basic-products.scss";
+@use "./blocks/catalog/additional-preview.scss";
+@use "./blocks/catalog/catalog-gift.scss";
+@use "./blocks/catalog/additional-products.scss";
+@use "./blocks/catalog/catalog.scss";
+
+/* Страница Подбор программы */
+@use "./blocks/application/application-form.scss";
+@use "./blocks/application/application.scss";
