@@ -6,7 +6,7 @@
   align-items: center;
   width: 100%;
   margin: 0;
-  white-space: nowrap;
+  flex-wrap: wrap;
   font-family: $accent-font;
   font-size: 16px;
   line-height: 18px;
@@ -58,20 +58,23 @@
 }
 
 .form-field--has-icon .form-field__input {
-  padding-right: 52px;
+  padding-right: 40px;
 }
 
 .form-field__icon {
   position: absolute;
-  width: 56px;
-  height: 100%;
-  top: 0;
+  width: 35px;
+  height: 45px;
+  bottom: 0;
   right: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
   color: #222222;
   transition: color 0.2s ease-out;
+
+  @media (min-width: $tablet-width) {
+    height: 52px;
+  }
 }
 
 .form-field__input:focus ~ .form-field__icon {
