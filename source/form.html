@@ -79,12 +79,12 @@
 
               <label class="form-field">
                 Вес (кг):*
-                <input class="form-field__input" type="text" name="application-form__cat-weight" placeholder="7" required>
+                <input class="form-field__input" type="text" name="application-form__cat-weight" placeholder="7" pattern="^[ 0-9]+$" required>
               </label>
 
               <label class="form-field">
                 Возраст (лет):
-                <input class="form-field__input" type="text" name="application-form__cat-age" placeholder="7">
+                <input class="form-field__input" type="text" name="application-form__cat-age" placeholder="7" pattern="^[ 0-9]+$">
               </label>
             </div>
 
@@ -126,7 +126,7 @@
 
               <label class="form-field form-field--has-icon">
                 Телефон:*
-                <input class="form-field__input" type="tel" name="application-form__tel" placeholder="8 (960) 900-60-90" required>
+                <input class="form-field__input" type="tel" name="application-form__tel" placeholder="8 (960) 900-60-90" pattern="^[ 0-9 + ( ) -]+$" required>
 
                 <span class="form-field__icon" aria-hidden="true">
                   <svg width="20" height="21">

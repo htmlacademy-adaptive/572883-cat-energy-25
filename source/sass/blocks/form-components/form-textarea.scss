@@ -27,13 +27,13 @@
     border: 1px solid $text-color;
     outline: 1px solid $text-color;
   }
-
-  &--error {
-    border: 1px solid $error-color;
-    outline: 1px solid $error-color;
-  }
 }
 
 .form-textarea::placeholder {
   text-transform: uppercase;
+}
+
+.form-textarea--validation:invalid {
+  border: 1px solid $error-color;
+  outline: 1px solid $error-color;
 }
