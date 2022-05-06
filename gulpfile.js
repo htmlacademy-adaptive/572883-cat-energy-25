@@ -148,9 +148,7 @@ export const build = gulp.series(
     optimizeSvg,
     createSprite,
     createWebp
-  ),
-  server,
-  watcher
+  )
 );
 
 // Default
