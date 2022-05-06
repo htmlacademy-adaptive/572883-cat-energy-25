@@ -39,12 +39,6 @@
     outline: 1px solid $text-color;
   }
 
-  &:invalid:not(:placeholder-shown),
-  &--error {
-    border: 1px solid $error-color;
-    outline: 1px solid $error-color;
-  }
-
   @media (min-width: $tablet-width) {
     margin-left: 20px;
     padding-bottom: 10px;
@@ -81,7 +75,11 @@
   color: $accent;
 }
 
-.form-field__input:invalid:not(:placeholder-shown) ~ .form-field__icon,
-.form-field__input--error ~ .form-field__icon {
+.form-field__input--validation:invalid {
+  border: 1px solid $error-color;
+  outline: 1px solid $error-color;
+}
+
+.form-field__input--validation:invalid ~ .form-field__icon {
   color: $error-color;
 }

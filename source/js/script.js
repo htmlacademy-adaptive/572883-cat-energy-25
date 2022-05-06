@@ -89,4 +89,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
+  /* Валидация формы */
+
+  if ( document.body.classList.contains("application") ) {
+
+    let applicationForm = document.querySelector(".application-form");
+    let applicationFormInput = applicationForm.querySelectorAll(".form-field__input");
+    let applicationFormTextarea = applicationForm.querySelectorAll(".form-textarea");
+
+    applicationForm.addEventListener("invalid", () => {
+
+      applicationFormInput.forEach( function(item) {
+        item.classList.add("form-field__input--validation");
+      });
+
+      applicationFormTextarea.forEach( function(item) {
+        item.classList.add("form-textarea--validation");
+      });
+
+    }, true);
+  }
+
 });
