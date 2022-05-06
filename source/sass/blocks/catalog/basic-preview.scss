@@ -37,6 +37,15 @@
 
 .basic-preview__images a {
   display: block;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 .basic-preview__images img {
@@ -72,11 +81,6 @@
   line-height: 20px;
   text-transform: uppercase;
 
-  a {
-    color: $dark-text;
-    text-decoration: none;
-  }
-
   @media (min-width: $tablet-width) {
     width: 150px;
     font-size: 20px;
@@ -88,6 +92,20 @@
     font-size: 20px;
     line-height: 21px;
     margin-bottom: 17px;
+  }
+}
+
+.basic-preview__title a {
+  color: $dark-text;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

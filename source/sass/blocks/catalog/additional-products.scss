@@ -58,6 +58,10 @@
     padding: 0 37px;
     margin-left: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -37px;
+  }
 }
 
 .additional-products__title br {

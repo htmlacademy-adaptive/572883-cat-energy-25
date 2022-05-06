@@ -24,7 +24,7 @@
     background-color: $accent;
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
-    background-position: center;
+    background-position: center, center;
 
     @media (max-width: $only-mobile-width) {
       background-image:
@@ -44,14 +44,14 @@
 
     @media (min-width: $desktop-width) {
       content: "";
-      top: -171px;
+      top: -118px;
       left: 50%;
       bottom: 0;
       height: auto;
       background-image:
         linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
         url("../img/promo/promo-bg-desktop.jpg");
-      background-position: left center;
+      background-position: center, left top;
 
       @media (min-resolution: 2dppx) {
         background-image:
