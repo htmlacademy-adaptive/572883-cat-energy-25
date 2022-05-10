@@ -83,14 +83,14 @@
 
 .contacts__map {
   height: 362px;
-  background-image: url("../img/contacts/map-small.jpg");
+  background-image: url("../img/contacts/map-small.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   @media (min-width: $tablet-width) {
     height: 400px;
-    background-image: url("../img/contacts/map.jpg");
+    background-image: url("../img/contacts/map.png");
   }
 
   @media (min-width: $desktop-width) {
