@@ -1,7 +1,7 @@
 /* Глобальные стили */
 @use "./global/fonts.scss";
 @use "./global/global.scss";
-@use "./global/page.scss";
+@use "./blocks/page.scss";
 
 /* Компоненты */
 @use "./blocks/container.scss";
