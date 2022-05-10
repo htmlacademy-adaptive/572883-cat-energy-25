@@ -28,7 +28,7 @@
 
 .programs__item {
   position: relative;
-  padding: 30px 20px 21px;
+  padding: 29px 20px 21px;
   background-color: $basic-grey;
 
   @media (min-width: $tablet-width) {
@@ -130,12 +130,13 @@
   font-family: $accent-font;
   font-weight: 400;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 37px;
   text-transform: uppercase;
   color: $black-text;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
+    line-height: 36px;
     margin-bottom: 27px;
     margin-left: 0;
   }
