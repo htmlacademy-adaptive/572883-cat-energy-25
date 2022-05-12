@@ -20,8 +20,8 @@
 }
 
 .form-field__input {
-  width: 0;
-  flex-grow: 1;
+  flex: 1 0 0;
+  height: 45px;
   margin-left: 13px;
   padding: 10px 15px 9px;
   font-family: $accent-font;
@@ -40,6 +40,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    height: 52px;
     margin-left: 20px;
     padding-bottom: 10px;
     font-size: 20px;
